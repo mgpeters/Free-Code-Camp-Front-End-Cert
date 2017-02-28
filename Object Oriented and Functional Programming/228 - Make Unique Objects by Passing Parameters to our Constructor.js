@@ -1,4 +1,4 @@
-// This tsk was similar to the prior, except the function allows additional
+// This task was similar to the prior, except the function allows additional
 // peramiters so we can create "different objects" with inputed values.
 
 
