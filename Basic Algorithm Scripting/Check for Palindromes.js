@@ -8,12 +8,7 @@ function palindrome(str) {
   
   var reverseString = string.split("").reverse().join('');
   
-  if (reverseString === string){
+  return reverseString === string;
   
-  return true;
-  }
-  else{
-    return false;
-  }  
 }
 palindrome("eye");
