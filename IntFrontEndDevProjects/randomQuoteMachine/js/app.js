@@ -19,7 +19,7 @@ $(document).ready(function(){
         			$(this).attr('href', 'https://twitter.com/intent/tweet?text=' + '"' + quote + '"' + " - " + title);
         		}
         		else{
-        			alert("This quote has too many characters")
+        			return alert("This quote has too many characters")
         		}
         	});
         	// If the Source is available, use it. Otherwise hide it.
