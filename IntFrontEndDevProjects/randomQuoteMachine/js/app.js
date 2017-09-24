@@ -10,7 +10,7 @@ $(document).ready(function(){
         	$('#quote-content').html(post.content);
         	// If the Source is available, use it. Otherwise hide it.
         	if (typeof post.custom_meta !== 'undefined' && typeof post.custom_meta.Source !== 'undefined') {
-          		$('#quote-source').html('Source:' + post.custom_meta.Source);
+          		$('#quote-source').html('Source: ' + post.custom_meta.Source);
         	} else {
           		$('#quote-source').text('');
         		}
