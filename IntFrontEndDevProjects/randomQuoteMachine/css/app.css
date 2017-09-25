@@ -4,5 +4,8 @@ body {
 .grid-container{
 	background-color: white;
 	height: 500px;
-	padding-top: 175px;
+	border-top: 50px;
+	border-radius: 7px;
+	padding-top: 150px;
+
 }
