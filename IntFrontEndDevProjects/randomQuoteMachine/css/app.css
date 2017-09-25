@@ -5,7 +5,7 @@ body {
 .grid-container{
 	position: relative;
 	background-color: white;
-	height: 500px;
+	height:550px;
 	border-radius: 7px;
 	padding-top: 100px;
 }
