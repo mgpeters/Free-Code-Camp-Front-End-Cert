@@ -1,11 +1,11 @@
 body {
 	background-color: #EAE8E8;
+	padding: 75px 30px 75px 30px;
 }
 .grid-container{
+	position: relative;
 	background-color: white;
 	height: 500px;
-	border-top: 50px;
 	border-radius: 7px;
 	padding-top: 150px;
-
 }
