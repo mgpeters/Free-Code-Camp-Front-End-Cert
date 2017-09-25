@@ -13,7 +13,6 @@ $(document).ready(function(){
         				.replace("&#8221", '"').replace("<br />", "");
         		console.log(quote);
         	$('.twitter-share-button').on('click', function(){
-        		str = 
         		if(quote.length >= 141){
         			return alert("This quote has too many characters");
         		}
