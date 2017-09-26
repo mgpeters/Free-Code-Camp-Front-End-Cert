@@ -1,6 +1,6 @@
 $(document).foundation()
 $(document).ready(function(){
-	$('#getMessage').on('click', function(e){
+	$('#getMessage').on('click', function(e){ //AJAX call for random quote
 	  e.preventDefault();
 	  $.ajax( {
 		url: 'http://www.quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=',
