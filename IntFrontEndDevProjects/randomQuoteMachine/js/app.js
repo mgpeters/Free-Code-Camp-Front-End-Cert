@@ -12,6 +12,8 @@ $(document).ready(function(){
         			.replace("&#8217;", "'").replace("&#8230;", "...").replace("&#8220;", '"')
         				.replace("&#8221", '"').replace("<br />", "");
         		console.log(quote);
+        		document.getElementById("tweetOut").style.visibility = "visible"; // hides tweet button until quote's called
+        			
         	$('.twitter-share-button').on('click', function(){
         		if(quote.length >= 141){
         			return alert("This quote has too many characters");
