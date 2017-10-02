@@ -12,11 +12,9 @@ $(document).ready(function(){
       			weatherCity = data.name;
       		// calls to manipulate the DOM
 	        	$('#weather-temp').html(weatherTemp);
-	        	$('#weather-main').html(weatherMain);
-	        	$('#weather-desc').html(weatherDesc);
+	        	$('#weather-main').html(weatherMain + " - " + weatherDesc);
 	        	$('#weather-icon').html('<img src="' + weatherIcon + '" ></img>');
-	        	$('#weather-country').html(weatherCountry);
-	        	$('#weather-city').html(weatherCity);
+	        	$('#weather-country').html(weatherCity + " - " + weatherCountry);
 	      		},
       		cache: false
     	});
