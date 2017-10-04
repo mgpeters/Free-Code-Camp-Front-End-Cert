@@ -1,5 +1,13 @@
 $(document).foundation()
 $(document).ready(function(){
+			// Geolocation for AKAX call
+	if ("geolocation" in navigator) {
+  			alert("Location Available");
+		} 
+	else {
+ 			alert("Location Not Available");
+		}
+
 	  $.ajax( {
 		url: 'https://fcc-weather-api.glitch.me/api/current?lat=35&lon=139',
       	success: function(data) {
@@ -9,8 +17,7 @@ $(document).ready(function(){
       			weatherDesc = data.weather[0].description,
       			weatherIcon = data.weather[0].icon,
       			weatherCountry = data.sys.country,
-      			weatherCity = data.name;
-
+      			weatherCity = data.name
       		// calls to manipulate the DOM
 	        	$('#weather-temp').html(weatherTemp);
 	        	$('#weather-main').html(weatherMain + " - " + weatherDesc);
