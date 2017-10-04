@@ -1,29 +1,18 @@
 $(document).foundation()
 $(document).ready(function(){
 	var latit,
-		longit,
-		weatherAPI;
+		longit;
 
 	function showPosition(position){
-  			latit = position.coords.latitude.toFixed(2);
-  			longit = position.coords.longitude.toFixed(2);
-  			weatherAPI = 'https://fcc-weather-api.glitch.me/api/current?lat=' + latit + "&lon=" + longit + "'"
-  			console.log(weatherAPI);
-  			loadWeather(); //Calls AJAX
-	}
+  		latit = position.coords.latitude.toFixed(4);
+  		longit = position.coords.longitude.toFixed(4);
 
-// Geolocation for AJAX call
-	if ("geolocation" in navigator) {
-  		navigator.geolocation.getCurrentPosition(showPosition);
-		} 
-	else {
- 		alert("GeoLocation Not Available");
-		}
-		function loadWeather(){
-		  $.ajax( {
+  		loadWeather(); //Calls AJAX when I want!
+	}
+	function loadWeather(){
+		$.ajax( {
 			url: 'https://fcc-weather-api.glitch.me/api/current?lat=' + latit + '&lon=' + longit,
 	      	success: function(data) {
-	      		console.log(data);
 	      		// variables to dump JSON API data in
 	      		var weatherTemp = data.main.temp,
 	      			weatherMain = data.weather[0].main,
@@ -40,4 +29,12 @@ $(document).ready(function(){
 	      		cache: false
 	    	});
 		}
+		// Geolocation for AJAX call
+	if ("geolocation" in navigator) {
+  		navigator.geolocation.getCurrentPosition(showPosition);
+		} 
+	else {
+ 		alert("GeoLocation Not Available");
+		}
+		
 });
