@@ -7,13 +7,14 @@ $(document).ready(function(){
       		var weatherTemp = data.main.temp,
       			weatherMain = data.weather[0].main,
       			weatherDesc = data.weather[0].description,
-      			weatherIcon = data.weather[0].icon;
+      			weatherIcon = data.weather[0].icon,
       			weatherCountry = data.sys.country,
       			weatherCity = data.name;
+
       		// calls to manipulate the DOM
 	        	$('#weather-temp').html(weatherTemp);
 	        	$('#weather-main').html(weatherMain + " - " + weatherDesc);
-	        	$('#weather-icon').html('<img src="' + weatherIcon + '" ></img>');
+	        	$('#weather-icon').html('<img src="' + weatherIcon + '"></img>');
 	        	$('#weather-country').html(weatherCity + " - " + weatherCountry);
 	      		},
       		cache: false
