@@ -19,7 +19,14 @@ $(document).ready(function(){
 	      			weatherDesc = data.weather[0].description,
 	      			weatherIcon = data.weather[0].icon,
 	      			weatherCountry = data.sys.country,
-	      			weatherCity = data.name
+	      			weatherCity = data.name;
+
+	      			if (weatherMain = "Clear"){
+	      				document.body.style.backgroundImage = "url(../img/cloudy.jpeg)"
+	      			}
+
+	      			
+
 	      		// calls to manipulate the DOM
 		        	$('#weather-temp').html(weatherTemp);
 		        	$('#weather-main').html(weatherMain + " - " + weatherDesc);
