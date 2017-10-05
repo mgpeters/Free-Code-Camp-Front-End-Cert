@@ -21,7 +21,8 @@ $(document).ready(function(){
 	      			weatherCountry = data.sys.country,
 	      			weatherCity = data.name;
 
-	      			if (weatherMain = "Clear"){
+	      		//Changes background depending on weatherDesc string
+	      			if (weatherMain == "Clear"){
 	      				document.body.style.backgroundImage = "url(../img/cloudy.jpeg)"
 	      			}
 
