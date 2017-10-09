@@ -22,8 +22,13 @@ $(document).ready(function(){
 	      			weatherCity = data.name;
 
 	      		//Changes background depending on weatherDesc string
-	      			if (weatherMain == "Clear"){
-	      				document.body.style.backgroundImage = "url(../img/cloudy.jpeg)"
+	      			switch(weatherMain){
+	      				case "Clear":
+	      					document.body.style.backgroundImage = "url(../img/cloudy.jpeg)";
+	      					break;
+	      				case "Mist":
+	      					document.body.style.backgroundImage = "url(../img/cloudy.jpeg)";
+	      					break;
 	      			}
 
 	      			
