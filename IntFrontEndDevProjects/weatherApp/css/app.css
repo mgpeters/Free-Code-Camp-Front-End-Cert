@@ -1,5 +1,6 @@
 body {
-	background-color: #DADADA;
+	/*background-color: #DADADA;*/
+	background-image: url(../img/default.jpeg);
 }
 .cell {
 	text-align: center;
@@ -10,4 +11,5 @@ body {
 	height: 500px;
 	background-color: #F0F0F0;
 	border-radius: 15px;
+	opacity: .5;
 }
