@@ -15,7 +15,10 @@ body {
 }
 #header-text {
 	font-family: 'Open Sans', sans-serif;
+	padding-top: 30px;
 }
 #current-weather {
 	font-family: 'Montserrat', sans-serif;
+	padding-top: 30px;
+	font-size: 30px;
 }
