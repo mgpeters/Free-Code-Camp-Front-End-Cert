@@ -1,6 +1,7 @@
 body {
 	/*background-color: #DADADA;*/
 	background-image: url(../img/default.jpeg);
+	transition: background 0.5s linear;
 }
 .cell {
 	text-align: center;

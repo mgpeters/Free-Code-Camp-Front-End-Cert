@@ -30,6 +30,7 @@ $(document).ready(function(){
 	      					break;
 	      				case "Clouds":
 	      					document.body.style.backgroundImage = "url(../img/cloudy2.jpeg)";
+	      					break;
 	      			}
 
 	      			
