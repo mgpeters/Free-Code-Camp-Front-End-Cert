@@ -35,12 +35,16 @@ $(document).ready(function(){
 	      					$("body").css("background-image", "url(../img/rain.jpg)");
 	      					break;
 	      			}
-	      			
+
 	      		// calls to manipulate the DOM
-		        	$('#weather-temp').html(weatherTemp);
+		        	$('#weather-temp').html(weatherTemp + ' <button class="temp-convert">C</button>');
 		        	$('#weather-main').html(weatherMain);
 		        	$('#weather-icon').html('<img src="' + weatherIcon + '"></img>');
 		        	$('#weather-country').html(weatherCity + " - " + weatherCountry);
+
+		        	//button click to change C to F
+
+		        	
 		      		},
 	      		cache: false
 	    	});
