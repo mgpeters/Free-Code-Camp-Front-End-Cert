@@ -23,11 +23,13 @@ $(document).ready(function(){
 	      		//Changes background depending on weatherDesc string
 	      			switch(weatherMain){
 	      				case "Clear":
-	      					document.body.style.backgroundImage = "url(../img/cloudy.jpeg)";
+	      					document.body.style.backgroundImage = "url(../img/clear.jpeg)";
 	      					break;
 	      				case "Mist":
 	      					document.body.style.backgroundImage = "url(../img/cloudy.jpeg)";
 	      					break;
+	      				case "Clouds":
+	      					document.body.style.backgroundImage = "url(../img/cloudy2.jpeg)";
 	      			}
 
 	      			
