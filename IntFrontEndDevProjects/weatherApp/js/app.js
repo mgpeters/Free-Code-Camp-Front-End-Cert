@@ -35,9 +35,7 @@ $(document).ready(function(){
 	      					$("body").css("background-image", "url(../img/rain.jpg)");
 	      					break;
 	      			}
-
 	      			
-
 	      		// calls to manipulate the DOM
 		        	$('#weather-temp').html(weatherTemp);
 		        	$('#weather-main').html(weatherMain);
