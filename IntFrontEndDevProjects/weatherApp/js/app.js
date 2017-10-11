@@ -1,7 +1,8 @@
 $(document).foundation()
 $(document).ready(function(){
 	var latit,
-		longit;
+		longit,
+		c = true; //C to F conversion
 
 	function showPosition(position){
   		latit = position.coords.latitude.toFixed(4);
@@ -43,8 +44,18 @@ $(document).ready(function(){
 		        	$('#weather-country').html(weatherCity + " - " + weatherCountry);
 
 		        	//button click to change C to F
+		        	$(".temp-convert").click(function(){
+		        		if (c = true){
+		        			weatherTemp = weatherTemp.toFixed(0)  * 9/5 + 32;
+		        			$('#weather-temp').html(weatherTemp + ' <button class="temp-convert">F</button>');
+		        			c = false;
+		        		}
+		        		else if (c = false){
+		        			$('#weather-temp').html(weatherTemp + ' <button class="temp-convert">C</button>');
+		        			c = true;
+		        		}
+		        	})
 
-		        	
 		      		},
 	      		cache: false
 	    	});
