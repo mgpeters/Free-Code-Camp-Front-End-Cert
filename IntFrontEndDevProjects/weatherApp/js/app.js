@@ -1,7 +1,9 @@
 $(document).foundation()
 $(document).ready(function(){
 	var latit,
-		longit;
+		longit,
+		c = true, //for C to F temp conversion below;
+		weatherTempF; //to make sure the regular weatherTemp is not influenced
 
 	function showPosition(position){
   		latit = position.coords.latitude.toFixed(4);
@@ -43,11 +45,10 @@ $(document).ready(function(){
 		        	$('#weather-country').html(weatherCity + " - " + weatherCountry);
 
 		        	//button click to change C to F
-		        	var c = true;
 		        	$(document).on('click', '.temp-convert', function(){
 		        		if (c){
-		        			weatherTemp = weatherTemp.toFixed(0)  * 9/5 + 32;
-		        			$('#weather-temp').html(weatherTemp + ' <button class="temp-convert">F</button>');
+		        			weatherTempF = weatherTemp.toFixed(0)  * 9/5 + 32;
+		        			$('#weather-temp').html(weatherTempF + ' <button class="temp-convert">F</button>');
 		        			c = false;
 		        		}
 		        		else {
