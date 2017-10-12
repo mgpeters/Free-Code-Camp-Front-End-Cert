@@ -44,19 +44,17 @@ $(document).ready(function(){
 
 		        	//button click to change C to F
 		        	var c = true;
-		        	$(".temp-convert").on("click", function(){
-		        		if (c = true){
+		        	$(document).on('click', '.temp-convert', function(){
+		        		if (c){
 		        			weatherTemp = weatherTemp.toFixed(0)  * 9/5 + 32;
 		        			$('#weather-temp').html(weatherTemp + ' <button class="temp-convert">F</button>');
 		        			c = false;
 		        		}
 		        		else {
-		        			console.log("working click")
 		        			$('#weather-temp').html(weatherTemp + ' <button class="temp-convert">C</button>');
 		        			c = true;
 		        		}
 		        	})
-
 		      		},
 	      		cache: false
 	    	});
