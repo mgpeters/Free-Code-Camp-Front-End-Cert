@@ -2,7 +2,8 @@ $(document).foundation()
 $(document).ready(function(){
 	//$().on('click', function(){
 	  $.ajax( {
-		url: "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + keyword + "&prop=info&inprop=url&utf8=&format=json",
+	  	dataType: "json",
+		url: 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=futon&prop=info&inprop=url&utf8=&format=json',
       	success: function(data) {
         	var title = [],
         		snippet = [],
@@ -13,6 +14,9 @@ $(document).ready(function(){
         			snippet[x] = data.query.search.snippet;
         			pageUrl[x] = 'https://en.wikipedia.org/wiki/' + title;
         		}
+        		console.log(title);
+        		console.log(snippet);
+        		console.log(pageUrl);
       		},
       	cache: false
     	});
