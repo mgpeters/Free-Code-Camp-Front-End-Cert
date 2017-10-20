@@ -8,12 +8,13 @@ $(document).ready(function(){
       		console.log(data.query.search[1].title);
         	var title = [],
         		snippet = [],
-        		pageUrl = [];
-        		/*for (x = 0; x < data.query.search.length; x + 1){
-        			title[x] = data.query.search[x].title;
-        			snippet[x] = data.query.search[x].snippet;
-        			pageUrl[x] = 'https://en.wikipedia.org/wiki/' + title[x];
-        		}*/
+        		pageUrl = [],
+        		rounds = data.query.search.length;
+        		for (x = 0; x < rounds; x++ ){
+        			title.push(data.query.search[x].title);
+        			snippet.push(data.query.search[x].snippet);
+        			pageUrl.push('https://en.wikipedia.org/wiki/' + title[x]);
+        		}
         		console.log(title);
         		console.log(snippet);
         		console.log(pageUrl);
