@@ -9,8 +9,9 @@ $(document).ready(function(){
         	var title = [],
         		snippet = [],
         		pageUrl = [],
-        		rounds = data.query.search.length;
-        		for (x = 0; x < rounds; x++ ){
+        		rounds = data.query.search.length,
+        		x = 0;
+        		for (x; x < rounds; x+=1){
         			title.push(data.query.search[x].title);
         			snippet.push(data.query.search[x].snippet);
         			pageUrl.push('https://en.wikipedia.org/wiki/' + title[x]);
