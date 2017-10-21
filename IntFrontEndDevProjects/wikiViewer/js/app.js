@@ -18,7 +18,8 @@ $(document).ready(function(){
         			pageUrl.push('https://en.wikipedia.org/wiki/' + title[x]);
         		}
         		for (y; y < rounds; y += 1){
-        			$('.search-results').append('<div class="search-cell"><a href="' + pageUrl[y] + '">' + title[y] + '</a><br/>' + snippet[y] + '</div>')
+        			$('.search-results')
+        			.append('<div class="search-cell"><a href="' + pageUrl[y] + '">' + title[y] + '</a><br/>' + snippet[y] + '</div>')
         		}
       		},
       	//error: alert("There's an error on the page"),
