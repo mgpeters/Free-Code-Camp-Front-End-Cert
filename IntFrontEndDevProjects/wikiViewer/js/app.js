@@ -9,11 +9,16 @@ $(document).ready(function(){
         		snippet = [],
         		pageUrl = [],
         		rounds = data.query.search.length,
-        		x = 0;
-        		for (x; x < rounds; x +=1){
+        		x = 0,
+        		y = 0;
+
+        		for (x; x < rounds; x += 1){
         			title.push(data.query.search[x].title);
         			snippet.push(data.query.search[x].snippet);
         			pageUrl.push('https://en.wikipedia.org/wiki/' + title[x]);
+        		}
+        		for (y; y < rounds; y += 1){
+        			$('.search-results').append("<div>Test</div>")
         		}
       		},
       	//error: alert("There's an error on the page"),
