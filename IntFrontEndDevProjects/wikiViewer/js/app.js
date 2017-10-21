@@ -11,7 +11,7 @@ $(document).ready(function(){
         		pageUrl = [],
         		rounds = data.query.search.length,
         		x = 0;
-        		for (x; x < rounds; x+=1){
+        		for (x; x < rounds; x +=1){
         			title.push(data.query.search[x].title);
         			snippet.push(data.query.search[x].snippet);
         			pageUrl.push('https://en.wikipedia.org/wiki/' + title[x]);
