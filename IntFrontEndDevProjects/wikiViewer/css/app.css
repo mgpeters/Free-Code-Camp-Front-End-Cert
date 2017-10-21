@@ -1,7 +1,10 @@
 .cont {
-	background-color: grey;
+
 }
 .search-cell {
 	padding: 10px 10px 10px 10px;
 	color: purple;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
 }
