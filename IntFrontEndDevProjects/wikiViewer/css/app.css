@@ -1,8 +1,9 @@
 .cont {
 	padding: 100px 50px 100px 50px;
 }
-.search {
-	
+.search-div {
+	width: 50%;
+	margin: 0 auto;
 }
 .search-cell {
 	padding: 10px 10px 10px 10px;
