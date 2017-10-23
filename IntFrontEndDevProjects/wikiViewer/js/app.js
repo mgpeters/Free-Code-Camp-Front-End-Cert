@@ -10,6 +10,7 @@ $(document).ready(function(){
 	  	dataType: 'json',
 		url: 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=' + searchTerm + '&prop=info&origin=*&inprop=url&utf8=&format=json',
       	success: function(data) {
+      		console.log("Ajax OK")
         	var title = [],
         		snippet = [],
         		pageUrl = [],
