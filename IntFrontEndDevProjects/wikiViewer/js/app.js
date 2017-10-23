@@ -1,9 +1,14 @@
 $(document).foundation()
 $(document).ready(function(){
-	//$().on('click', function(){
+	$(".searchButton").on('click', function(){
+		var searchTerm = document.getElementsByName("search")[0].value;
+		console.log(searchTerm);
+
+	//Ajax call for the search click
+
 	  $.ajax( {
 	  	dataType: 'json',
-		url: 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=futon&prop=info&origin=*&inprop=url&utf8=&format=json',
+		url: 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=' + searchTerm + '&prop=info&origin=*&inprop=url&utf8=&format=json',
       	success: function(data) {
         	var title = [],
         		snippet = [],
@@ -25,6 +30,6 @@ $(document).ready(function(){
       	//error: alert("There's an error on the page"),
       	cache: false
     	});
-	//})  
+	})  
 
 })
