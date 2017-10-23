@@ -3,7 +3,9 @@
 }
 .search-div {
 	width: 50%;
+	height: 100px;
 	margin: 0 auto;
+	margin-top: 250px;
 	text-align: center;
 }
 .search-cell {
