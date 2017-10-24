@@ -1,15 +1,17 @@
 $(document).foundation()
 $(document).ready(function(){
+
+	var repeat = false;
+
 	$(".searchButton").on('click', function(){
 		var searchTerm = document.getElementsByName("search")[0].value,
 			rounds,
-			z = 0,
-			repeat = false;
+			z = 0;
 
-        	if(repeat){
-        		for (y; y < rounds; y += 1){
-        			$('.search-results').append('<div class="search-cell"></div>')
-        			}
+        	while(repeat){
+        		for (z; z < rounds; z += 1){
+        			$('.search-results').prepend('<div class="search-cell"></div>')
+        			} //* WORK ON THIS !! BUGGY
         		repeat = false;
         	}
 	//Ajax call for the search click
