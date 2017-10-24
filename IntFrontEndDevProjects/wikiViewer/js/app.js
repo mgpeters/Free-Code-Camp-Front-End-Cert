@@ -1,9 +1,17 @@
 $(document).foundation()
 $(document).ready(function(){
 	$(".searchButton").on('click', function(){
-		var searchTerm = document.getElementsByName("search")[0].value;
-		console.log(searchTerm);
+		var searchTerm = document.getElementsByName("search")[0].value,
+			rounds,
+			z = 0,
+			repeat = false;
 
+        	if(repeat){
+        		for (y; y < rounds; y += 1){
+        			$('.search-results').append('<div class="search-cell"></div>')
+        			}
+        		repeat = false;
+        	}
 	//Ajax call for the search click
 
 	  $.ajax( {
@@ -14,9 +22,9 @@ $(document).ready(function(){
         	var title = [],
         		snippet = [],
         		pageUrl = [],
-        		rounds = data.query.search.length,
         		x = 0,
-        		y = 0;
+        		y = 0,
+        		rounds = data.query.search.length;
 
         		for (x; x < rounds; x += 1){
         			title.push(data.query.search[x].title);
@@ -27,7 +35,8 @@ $(document).ready(function(){
         			$('.search-results')
         			.append('<div class="search-cell"><a href="' + pageUrl[y] + '">' + title[y] + '</a><br/>' + snippet[y] + '</div>')
         		}
-      		},
+        		repeat = true;
+	 		},
       	//error: alert("There's an error on the page"),
       	cache: false
     	});
