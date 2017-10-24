@@ -1,5 +1,5 @@
 .cont {
-	padding: 100px 50px 100px 50px;
+	padding: 50px 50px 50px 50px;
 }
 .search-div {
 	width: 50%;
@@ -7,6 +7,9 @@
 	margin: 0 auto;
 	margin-top: 250px;
 	text-align: center;
+}
+.search-results {
+	padding-top: 100px;
 }
 .search-cell {
 	padding: 10px 10px 10px 10px;
