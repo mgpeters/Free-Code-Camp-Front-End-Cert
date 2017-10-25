@@ -1,7 +1,7 @@
 $(document).foundation()
 
 function clearBox(elementID){	//function to clear html made by search
-    document.getElementById(elementID).innerHTML = "";
+    $(elementID).html("");
 }
 
 $(document).ready(function(){
@@ -14,9 +14,7 @@ $(document).ready(function(){
 			z = 0;
 
         	while(repeat){
-        		for (z; z < rounds; z += 1){
-        			$('.search-results').prepend('<div class="search-cell"></div>')
-        			} //* WORK ON THIS !! BUGGY
+        		clearBox(".search-results");
         		repeat = false;
         	}
 	//Ajax call for the search click
