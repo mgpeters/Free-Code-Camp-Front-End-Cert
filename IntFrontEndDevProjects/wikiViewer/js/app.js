@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 	var repeat = false;
 
-	$(".searchButton").on('click', function(){
+	$(".searchButton, .searchBox").on('click', function(){ //* need to fix text box enter**
 		var searchTerm = document.getElementsByName("search")[0].value,
 			rounds,
 			z = 0;
