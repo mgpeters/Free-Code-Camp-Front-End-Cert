@@ -1,4 +1,9 @@
 $(document).foundation()
+
+function clearBox(elementID){	//function to clear html made by search
+    document.getElementById(elementID).innerHTML = "";
+}
+
 $(document).ready(function(){
 
 	var repeat = false;
