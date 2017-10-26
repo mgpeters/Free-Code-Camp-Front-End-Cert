@@ -29,6 +29,7 @@
 	font-family: 'Cinzel', serif;
 }
 .searchBox {
+	max-width: 300px;
 	margin: 0 auto;
 }
 
