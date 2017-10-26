@@ -5,7 +5,7 @@
 	width: 50%;
 	height: 100px;
 	margin: 0 auto;
-	margin-top: 250px;
+	margin-top: 200px;
 	text-align: center;
 }
 .search-results {
@@ -28,4 +28,8 @@
 .title-page {
 	font-family: 'Cinzel', serif;
 }
+.searchBox {
+	margin: 0 auto;
+}
+
 
