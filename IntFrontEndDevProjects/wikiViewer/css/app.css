@@ -9,7 +9,7 @@
 	text-align: center;
 }
 .search-results {
-	padding-top: 100px;
+	padding-top: 500px;
 }
 .search-cell {
 	padding: 10px 10px 10px 10px;
@@ -29,6 +29,7 @@
 	font-family: 'Cinzel', serif;
 }
 .searchBox {
+	position: relative;
 	max-width: 300px;
 	margin: 0 auto;
 }
