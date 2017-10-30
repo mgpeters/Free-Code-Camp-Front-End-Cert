@@ -6,11 +6,15 @@ $(document).ready(function(){
 		x = 0;
 		jsonAPI = [];
 
-		for (x; x < users.length; x += 1){
-			$.getJSON('https://wind-bow.gomix.me/twitch-api/users/' + users[x] + '?callback=?', function(data){
+		function getData(user){
+			$.getJSON('https://wind-bow.gomix.me/twitch-api/users/' + user + '?callback=?', function(data){
 				jsonAPI.push(data);
 			})
 		}
+
+		for (x; x < users.length; x += 1){
+				getData(users[x]);
+			}
 		console.log(jsonAPI);
 
  })
