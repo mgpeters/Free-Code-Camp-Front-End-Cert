@@ -9,9 +9,4 @@ $(document).ready(function(){
 		jsonAPI = [],
 		y = 0;
 
-		for(y;y > users.length; y += 1){
-			jsonAPI[y] = getData(users[y]);
-					console.log(jsonAPI);
-		}
-		console.log(jsonAPI);
 })
