@@ -11,6 +11,11 @@ $(document).ready(function(){
 				jsonAPI.push(data);
 			})
 		}
+		
+		function newUser(nUser){
+			users.push(nUser);
+			getData(nUser);
+		}
 
 		for (x; x < users.length; x += 1){
 				getData(users[x]);
