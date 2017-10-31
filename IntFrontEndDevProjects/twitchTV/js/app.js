@@ -11,9 +11,12 @@ $(document).ready(function(){
 			$.getJSON('https://wind-bow.gomix.me/twitch-api/users/' + user + '?callback=?', function(data){
 				userData.push(data);
 			})
+			/*$.getJSON('https://wind-bow.gomix.me/twitch-api/streams/' + user + '?callback=?', function(data){
+				userData.push(data);
+			})*/
 		}
 
-		function getUserStatus(user){
+		/*function getUserStatus(user){
 			$.getJSON('https://wind-bow.gomix.me/twitch-api/streams/' + user + '?callback=?', function(data){
 				userStatus.push(data);
 			})
@@ -22,14 +25,12 @@ $(document).ready(function(){
 		function newUser(nUser){
 			users.push(nUser);
 			getUserData(nUser);
-		}
+		}*/
 
 		for (x; x < users.length; x += 1){
 				getUserData(users[x]);
-				getUserStatus(users[x]);
 			}
-		console.log(userData);
-		console.log(userStatus);
 
+		console.log(userData);
  })
 
