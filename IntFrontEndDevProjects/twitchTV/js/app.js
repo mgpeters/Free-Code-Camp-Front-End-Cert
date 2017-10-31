@@ -4,11 +4,18 @@ $(document).foundation()
 $(document).ready(function(){
 	var users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"],
 		x = 0;
-		jsonAPI = [];
+		userData = [],
+		userStatus = [];
 
 		function getUserData(user){
-			$.getJSON('https://wind-bow.gomix.me/twitch-api/user/' + user + '?callback=?', function(data){
-				jsonAPI.push(data);
+			$.getJSON('https://wind-bow.gomix.me/twitch-api/users/' + user + '?callback=?', function(data){
+				userData.push(data);
+			})
+		}
+
+		function getUserStatus(user){
+			$.getJSON('https://wind-bow.gomix.me/twitch-api/streams/' + user + '?callback=?', function(data){
+				userStatus.push(data);
 			})
 		}
 
@@ -19,8 +26,10 @@ $(document).ready(function(){
 
 		for (x; x < users.length; x += 1){
 				getUserData(users[x]);
+				getUserStatus(users[x]);
 			}
-		console.log(jsonAPI);
+		console.log(userData);
+		console.log(userStatus);
 
  })
 
