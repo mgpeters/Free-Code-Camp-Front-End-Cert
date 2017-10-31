@@ -6,19 +6,19 @@ $(document).ready(function(){
 		x = 0;
 		jsonAPI = [];
 
-		function getData(user){
-			$.getJSON('https://wind-bow.gomix.me/twitch-api/users/' + user + '?callback=?', function(data){
+		function getUserData(user){
+			$.getJSON('https://wind-bow.gomix.me/twitch-api/user/' + user + '?callback=?', function(data){
 				jsonAPI.push(data);
 			})
 		}
-		
+
 		function newUser(nUser){
 			users.push(nUser);
-			getData(nUser);
+			getUserData(nUser);
 		}
 
 		for (x; x < users.length; x += 1){
-				getData(users[x]);
+				getUserData(users[x]);
 			}
 		console.log(jsonAPI);
 
