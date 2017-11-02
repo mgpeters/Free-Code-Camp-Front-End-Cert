@@ -17,7 +17,11 @@ $(document).ready(function(){
 
 		function getUserStatus(user){
 			$.getJSON('https://wind-bow.gomix.me/twitch-api/streams/' + user + '?callback=?', function(data){
+				if (data.stream == undefined){
+					console.log("data.stream for " + user + " is undefined");
+				}
 				userObject[user].stream = data.stream;
+
 			})
 		}
 
@@ -35,5 +39,7 @@ $(document).ready(function(){
 
 		console.log(userData);
 		console.log(userObject);
+
+
  })
 
