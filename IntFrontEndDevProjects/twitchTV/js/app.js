@@ -4,10 +4,9 @@ $(document).foundation()
 $(document).ready(function(){
 	var users = ["ESL_SC2", "OgamingSC2", "cretetion", "FreeCodeCamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"],
 		x = 0,
-		userData = [],
 		userObject = {};
 
-		function getUserData(user){ //gets the bulk of the api data I want to play aroundd with
+		function getUserData(user){ //gets the bulk of the api data I want to play around with
 			$.getJSON('https://wind-bow.gomix.me/twitch-api/users/' + user + '?callback=?', function(data){
 				var id = data.display_name
 				userObject[id] = data;
@@ -26,13 +25,9 @@ $(document).ready(function(){
 			getUserData(nUser);
 		}
 
-		for (x; x < users.length; x += 1){
+		for (x; x < users.length; x += 1){ // Loops over every name in the users array
 				getUserData(users[x]);
 			}
-
-		console.log(userData);
-		console.log(userObject);
-
-
+		console.log(userObject); //checks to see if my object is doing what I want
  })
 
