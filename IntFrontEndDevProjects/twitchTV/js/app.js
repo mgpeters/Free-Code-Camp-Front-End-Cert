@@ -27,10 +27,14 @@ $(document).ready(function(){
 
 		for (x; x < users.length; x += 1){ // Loops over every name in the users array
 				getUserData(users[x]);
-				let userKey = users[x];
-				//$('#user-div')
-        		//	.append('<div class="user-result-cell"><a href="' + userObject[userKey]._links.self + '">' + userObject[usersKey].display_name + '</a><br/><h6>' + userObject[userKey].bio + '</h6></div>')
+				/*let userKey = users[x];
+				console.log(userKey);
+				console.log(userObject[userKey].stream);
+				$('#user-div')
+        		.append('<div class="user-result-cell"><a href="' + userObject[userKey]._links.self + '">' + userObject[usersKey].display_name + '</a><br/><h6>' + userObject[userKey].bio + '</h6></div>')
+			*/
 			}
 		console.log(userObject); //checks to see if my object is doing what I want
+		console.log(userObject.FreeCodeCamp.created_at)
  })
 
