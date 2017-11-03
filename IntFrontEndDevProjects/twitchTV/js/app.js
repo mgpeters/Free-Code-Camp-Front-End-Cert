@@ -27,8 +27,9 @@ $(document).ready(function(){
 
 		for (x; x < users.length; x += 1){ // Loops over every name in the users array
 				getUserData(users[x]);
-				$('#user-div')
-        			.append('<div class="user-result-cell"><a href="' + pageUrl[y] + '">' + title[y] + '</a><br/>' + snippet[y] + '</div>')
+				let userKey = users[x];
+				//$('#user-div')
+        		//	.append('<div class="user-result-cell"><a href="' + userObject[userKey]._links.self + '">' + userObject[usersKey].display_name + '</a><br/><h6>' + userObject[userKey].bio + '</h6></div>')
 			}
 		console.log(userObject); //checks to see if my object is doing what I want
  })
