@@ -35,6 +35,6 @@ $(document).ready(function(){
 			*/
 			}
 		console.log(userObject); //checks to see if my object is doing what I want
-		console.log(userObject.FreeCodeCamp.created_at)
+		//console.log(userObject.ESL_SC2.display_name)
  })
 
