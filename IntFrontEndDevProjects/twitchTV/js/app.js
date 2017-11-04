@@ -26,6 +26,13 @@ $(document).ready(function(){
 			getUserData(nUser);
 		}
 
+		function objectTest(data){
+			console.log(userObject); //checks to see if my object is doing what I want
+			console.log(Object.keys(userObject));
+			console.log(JSON.stringify(userObject));
+			return data;
+		}
+
 		for (x; x < users.length; x += 1){ // Loops over every name in the users array
 				getUserData(users[x]);
 				/*let userKey = users[x];
@@ -36,9 +43,6 @@ $(document).ready(function(){
 			*/
 			}
 		
-		console.log(userObject); //checks to see if my object is doing what I want
-		console.log(Object.keys(userObject));
-		console.log(JSON.stringify(userObject));
-		//console.log(userObject.ESL_SC2.display_name)
+		setTimeout(objectTest(userObject), 10);
  })
 
