@@ -12,13 +12,25 @@ $(document).ready(function(){
 				userObject[id] = JSON.parse(JSON.stringify(data));
 				getUserStatus(user);
 				console.log(data);
+				parseUser(data);
 			})
 		}
 
 		function getUserStatus(user){ //needed to band-aid the async problem and to add the steam status
 			$.getJSON('https://wind-bow.gomix.me/twitch-api/streams/' + user + '?callback=?', function(data){
-				userObject[user].stream = data.stream;
+				userObject[user].status = data.stream;
 			})
+		}
+
+		function parseUser(data){
+			let name = data.name,
+				bio = data.bio,
+				logo = data.logo,
+				status = data.status,
+				links = data._links.self;
+
+			$('#user-div')
+        		.append('<div class="user-result-cell"><a href="' + links + '">' + name + '</a><br/><h6>' + bio + '</h6></div>')
 		}
 
 		function newUser(nUser){ //made but not implemented yet.
