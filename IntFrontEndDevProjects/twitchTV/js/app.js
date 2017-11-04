@@ -9,8 +9,9 @@ $(document).ready(function(){
 		function getUserData(user){ //gets the bulk of the api data I want to play around with
 			$.getJSON('https://wind-bow.gomix.me/twitch-api/users/' + user + '?callback=?', function(data){
 				var id = data.display_name
-				userObject[id] = data;
+				userObject[id] = JSON.parse(JSON.stringify(data));
 				getUserStatus(user);
+				console.log(data);
 			})
 		}
 
@@ -34,7 +35,10 @@ $(document).ready(function(){
         		.append('<div class="user-result-cell"><a href="' + userObject[userKey]._links.self + '">' + userObject[usersKey].display_name + '</a><br/><h6>' + userObject[userKey].bio + '</h6></div>')
 			*/
 			}
+		
 		console.log(userObject); //checks to see if my object is doing what I want
+		console.log(Object.keys(userObject));
+		console.log(JSON.stringify(userObject));
 		//console.log(userObject.ESL_SC2.display_name)
  })
 
