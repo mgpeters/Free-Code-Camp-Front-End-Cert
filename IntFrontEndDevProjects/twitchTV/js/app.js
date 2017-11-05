@@ -8,11 +8,11 @@ $(document).ready(function(){
 
 		function getUserData(user){ //gets the bulk of the api data I want to play around with
 			$.getJSON('https://wind-bow.gomix.me/twitch-api/users/' + user + '?callback=?', function(data){
-				var id = data.display_name
-				userObject[id] = JSON.parse(JSON.stringify(data));
-				getUserStatus(user);
-				console.log(data);
-				parseUser(data);
+				var id = data.display_name;
+					userObject[id] = JSON.parse(JSON.stringify(data));
+					
+					getUserStatus(user);
+					console.log(data);
 			})
 		}
 
