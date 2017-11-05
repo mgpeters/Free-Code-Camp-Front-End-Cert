@@ -31,6 +31,7 @@ $(document).ready(function(){
 
 			$('#user-div')
         		.append('<div class="user-result-cell"><a href="' + links + '">' + name + '</a><br/><h6>' + bio + '</h6></div>')
+        	console.log(links);
 		}
 
 		function newUser(nUser){ //made but not implemented yet.
