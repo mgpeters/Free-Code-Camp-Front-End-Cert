@@ -4,11 +4,6 @@ $(document).foundation()
 $(document).ready(function(){
 	var users = ["ESL_SC2", "OgamingSC2", "cretetion", "FreeCodeCamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"],
 		x = 0,
-		name,
-		bio,
-		logo,
-		status,
-		links,
 		userObject = {};
 
 		function getUserData(user){ //gets the bulk of the api data I want to play around with
@@ -18,12 +13,12 @@ $(document).ready(function(){
 					name = data.name,
 					bio = data.bio,
 					logo = data.logo,
-					links = data._links.self;
-				
+					links = "http://go.twitch.tv/" + name,
+					status = "";
+
 					getUserStatus(user);
 					parseUser();
 					console.log(data);
-					console.log(status);
 			})
 		}
 
@@ -31,6 +26,7 @@ $(document).ready(function(){
 			$.getJSON('https://wind-bow.gomix.me/twitch-api/streams/' + user + '?callback=?', function(data){
 				userObject[user].status = data.stream;
 				status = data.status;
+				console.log(data);
 			})
 		}
 
@@ -60,7 +56,6 @@ $(document).ready(function(){
         		.append('<div class="user-result-cell"><a href="' + userObject[userKey]._links.self + '">' + userObject[usersKey].display_name + '</a><br/><h6>' + userObject[userKey].bio + '</h6></div>')
 			*/
 			}
-		
-		console.log
+			objectTest(userObject);
  })
 
