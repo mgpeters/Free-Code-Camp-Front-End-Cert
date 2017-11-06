@@ -4,34 +4,39 @@ $(document).foundation()
 $(document).ready(function(){
 	var users = ["ESL_SC2", "OgamingSC2", "cretetion", "FreeCodeCamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"],
 		x = 0,
+		name,
+		bio,
+		logo,
+		status,
+		links,
 		userObject = {};
 
 		function getUserData(user){ //gets the bulk of the api data I want to play around with
 			$.getJSON('https://wind-bow.gomix.me/twitch-api/users/' + user + '?callback=?', function(data){
 				var id = data.display_name;
-					userObject[id] = JSON.parse(JSON.stringify(data));
-					
+					userObject[id] = JSON.parse(JSON.stringify(data)),
+					name = data.name,
+					bio = data.bio,
+					logo = data.logo,
+					links = data._links.self;
+				
 					getUserStatus(user);
+					parseUser();
 					console.log(data);
+					console.log(status);
 			})
 		}
 
 		function getUserStatus(user){ //needed to band-aid the async problem and to add the steam status
 			$.getJSON('https://wind-bow.gomix.me/twitch-api/streams/' + user + '?callback=?', function(data){
 				userObject[user].status = data.stream;
+				status = data.status;
 			})
 		}
 
-		function parseUser(data){
-			let name = data.name,
-				bio = data.bio,
-				logo = data.logo,
-				status = data.status,
-				links = data._links.self;
-
+		function parseUser(){
 			$('#user-div')
         		.append('<div class="user-result-cell"><a href="' + links + '">' + name + '</a><br/><h6>' + bio + '</h6></div>')
-        	console.log(links);
 		}
 
 		function newUser(nUser){ //made but not implemented yet.
@@ -56,6 +61,6 @@ $(document).ready(function(){
 			*/
 			}
 		
-		setTimeout(objectTest(userObject), 10);
+		console.log
  })
 
