@@ -18,7 +18,6 @@ $(document).ready(function(){
 
 					getUserStatus(user);
 					parseUser();
-
 			})
 		}
 
@@ -44,18 +43,12 @@ $(document).ready(function(){
 			console.log(Object.keys(userObject));
 		}
 
-		for (x; x < users.length; x += 1){ // Loops over every name in the users array
+		for (x; x < users.length; x += 1){ // Loops over every name in the users array, creating my userObject
 				getUserData(users[x]);
-				/*let userKey = users[x];
-				console.log(userKey);
-				console.log(userObject[userKey].stream);
-				$('#user-div')
-        		.append('<div class="user-result-cell"><a href="' + userObject[userKey]._links.self + '">' + userObject[usersKey].display_name + '</a><br/><h6>' + userObject[userKey].bio + '</h6></div>')
-			*/
 			}
 
-			setTimeout(function(){
-				objectTest(userObject);
-			}, 2000)
+		setTimeout(function(){
+			objectTest(userObject);
+		}, 1500)
  })
 
