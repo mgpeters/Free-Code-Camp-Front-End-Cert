@@ -13,7 +13,6 @@ $(document).ready(function(){
 					userObject[id] = JSON.parse(JSON.stringify(data)),
 
 					getUserStatus(user);
-					//parseUser();
 			})
 		}
 
@@ -22,11 +21,6 @@ $(document).ready(function(){
 				userObject[user].status = data.stream;
 				status = data.status;
 			})
-		}
-
-		function parseUser(){
-			$('#user-div')
-        		.append('<div class="user-result-cell"><a href="' + links + '">' + name + '</a><br/><h6>' + bio + '</h6></div>')
 		}
 
 		function newUser(nUser){ //made but not implemented yet.
@@ -50,10 +44,9 @@ $(document).ready(function(){
 					bio = userObject[users[y]].bio,
 					logo = userObject[users[y]].logo,
 					links = "http://go.twitch.tv/" + name,
-					status = userObject[users[y]].status,
 					online = '';
 
-					if (status == null){
+					if (userObject[users[y]].status == null){
 						online = "Offline";
 					}
 					else {
