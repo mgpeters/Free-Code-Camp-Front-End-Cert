@@ -4,20 +4,16 @@ $(document).foundation()
 $(document).ready(function(){
 	var users = ["ESL_SC2", "OgamingSC2", "cretetion", "FreeCodeCamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"],
 		x = 0,
+		y = 0,
 		userObject = {};
 
 		function getUserData(user){ //gets the bulk of the api data I want to play around with
 			$.getJSON('https://wind-bow.gomix.me/twitch-api/users/' + user + '?callback=?', function(data){
 				var id = data.display_name;
 					userObject[id] = JSON.parse(JSON.stringify(data)),
-					name = data.name,
-					bio = data.bio,
-					logo = data.logo,
-					links = "http://go.twitch.tv/" + name,
-					status = "";
 
 					getUserStatus(user);
-					parseUser();
+					//parseUser();
 			})
 		}
 
@@ -47,8 +43,18 @@ $(document).ready(function(){
 				getUserData(users[x]);
 			}
 
-		setTimeout(function(){
+		setTimeout(function(){	// Deals with the async issue while making my object
 			objectTest(userObject);
+				for(y; y < users.length; y += 1){
+				let name = userObject[users[y]].name,
+					bio = userObject[users[y]].bio,
+					logo = userObject[users[y]].logo,
+					links = "http://go.twitch.tv/" + name,
+					status = userObject[users[y]].status;
+					$('#user-div')
+        		.append('<div class="user-result-cell"><a href="' + links + '">' + name + '</a><br/><h6>' + bio + '</h6></div>')
+				}
+
 		}, 1500)
  })
 
