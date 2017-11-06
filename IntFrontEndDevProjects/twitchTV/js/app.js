@@ -50,11 +50,20 @@ $(document).ready(function(){
 					bio = userObject[users[y]].bio,
 					logo = userObject[users[y]].logo,
 					links = "http://go.twitch.tv/" + name,
-					status = userObject[users[y]].status;
+					status = userObject[users[y]].status,
+					online = '';
+
+					if (status == null){
+						online = "Offline";
+					}
+					else {
+						online = "Online";
+					}
+
 					$('#user-div')
-        		.append('<div class="user-result-cell"><a href="' + links + '">' + name + '</a><br/><h6>' + bio + '</h6></div>')
+        		.append('<div class="user-result-cell"><a href="' + links + '">' + name + '</a> ' + online + '<br/><h6>' + bio + '</h6></div>')
 				}
 
-		}, 1500)
+		}, 2000)
  })
 
