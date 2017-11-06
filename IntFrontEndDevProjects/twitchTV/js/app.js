@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 					getUserStatus(user);
 					parseUser();
-					console.log(data);
+
 			})
 		}
 
@@ -26,7 +26,6 @@ $(document).ready(function(){
 			$.getJSON('https://wind-bow.gomix.me/twitch-api/streams/' + user + '?callback=?', function(data){
 				userObject[user].status = data.stream;
 				status = data.status;
-				console.log(data);
 			})
 		}
 
@@ -43,8 +42,6 @@ $(document).ready(function(){
 		function objectTest(data){
 			console.log(userObject); //checks to see if my object is doing what I want
 			console.log(Object.keys(userObject));
-			console.log(JSON.stringify(userObject));
-			return data;
 		}
 
 		for (x; x < users.length; x += 1){ // Loops over every name in the users array
@@ -56,6 +53,9 @@ $(document).ready(function(){
         		.append('<div class="user-result-cell"><a href="' + userObject[userKey]._links.self + '">' + userObject[usersKey].display_name + '</a><br/><h6>' + userObject[userKey].bio + '</h6></div>')
 			*/
 			}
-			objectTest(userObject);
+
+			setTimeout(function(){
+				objectTest(userObject);
+			}, 2000)
  })
 
