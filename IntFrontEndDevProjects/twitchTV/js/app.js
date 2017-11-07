@@ -60,11 +60,11 @@ $(document).ready(function(){
 		setTimeout(function(){	// Deals with the async issue while making my object
 			objectTest(userObject);
 				for(y; y < users.length; y += 1){
-				let name = userObject[users[y]].name,
-					bio = userObject[users[y]].bio,
-					logo = userObject[users[y]].logo,
-					links = "http://go.twitch.tv/" + name,
-					online = '';
+					let name = userObject[users[y]].name,
+						bio = userObject[users[y]].bio,
+						logo = userObject[users[y]].logo,
+						links = "http://go.twitch.tv/" + name,
+						online = '';
 
 					if (userObject[users[y]].status == null){
 						online = "Offline";
@@ -77,7 +77,6 @@ $(document).ready(function(){
         		.append('<div class="user-result-cell"><a href="' + links + '">' + name + '</a> ' + online + '<br/><h6>' 
         					+ bio + '</h6></div>')
 				}
-
 		}, 2000)
  })
 
