@@ -1,6 +1,14 @@
 body {
 	background-color: #FCD0D0;
 }
+
 .grid-container {
 	background-color: #FCF3F3;
+}
+.header-div {
+	text-align: center;
+}
+
+.user-result-cell {
+
 }
