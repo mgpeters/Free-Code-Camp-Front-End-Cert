@@ -72,6 +72,9 @@ $(document).ready(function(){
 					else {
 						online = "Online";
 					}
+					while(logo == null){
+						logo = "https://static-cdn.jtvnw.net/jtv_user_pictures/dd542e0da09855b6-profile_image-300x300.jpeg";
+					}
 
 				$('#user-div')
         		.append('<div class="user-result-cell"><img id="user-image" src="' + logo + '"></img><a href="' + links + '"><h5 id="user-name">' + name + '</h5></a><h6 class=' + online + ' id="user-status"> ' + online + '</h6><br/></div>')
