@@ -12,6 +12,7 @@ body {
 	margin: auto;
 	width: 50%
 	padding: 10px;
+	padding: 7px 0px 7px 0px;
 }
 #user-image {
 	float: left;
@@ -24,7 +25,10 @@ body {
 }
 #user-name {
 	float: left;
+	padding: 10px 0px 0px 20px;
+
 }
 #user-status {
 	text-align: right;
+	padding: 10px 10px 0px 0px;
 }
