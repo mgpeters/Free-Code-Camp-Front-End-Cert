@@ -3,6 +3,7 @@ body {
 }
 .grid-container {
 	background-color: #FCF3F3;
+	max-width: 500px;
 }
 .header-div {
 	text-align: center;
