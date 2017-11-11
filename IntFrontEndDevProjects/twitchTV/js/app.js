@@ -18,7 +18,7 @@ $(document).ready(function(){
 			})
 		}
 
-		function getUserStatus(user){ //needed to band-aid the async problem and to add the steam status
+		function getUserStatus(user){ //needed to band-aid the async problem and to add the stream status
 			$.getJSON('https://wind-bow.gomix.me/twitch-api/streams/' + user + '?callback=?', function(data){
 				userObject[user].status = data.stream;
 			})
@@ -30,10 +30,10 @@ $(document).ready(function(){
 
 				setTimeout(function(){
 					let name = userObject[nUser].name,
-							bio = userObject[nUser].bio,
-							logo = userObject[nUser].logo,
-							links = "http://go.twitch.tv/" + name,
-							online = '';
+						bio = userObject[nUser].bio,
+						logo = userObject[nUser].logo,
+						links = "http://go.twitch.tv/" + name,
+						online = '';
 
 							if (userObject[users[y]].status == null){
 								online = "Offline";
@@ -79,6 +79,6 @@ $(document).ready(function(){
 				$('#user-div')
         		.append('<div class="user-result-cell"><img id="user-image" src="' + logo + '"></img><a href="' + links + '"><h5 id="user-name">' + name + '</h5></a><h6 class=' + online + ' id="user-status"> ' + online + '</h6><br/></div>')
 				}
-		}, 2000)
+		}, 1700)
  })
 
