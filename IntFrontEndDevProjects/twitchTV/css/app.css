@@ -2,11 +2,14 @@ body {
 	background-color: #7301AB;
 }
 .grid-container {
-	background-color: #34014E;
+	background-color: white;
 	max-width: 500px;
 }
 .header-div {
 	text-align: center;
+}
+.head-logo {
+	padding: 25px 0px 25px 0px;
 }
 .user-result-cell {
 	max-width: 400px;
@@ -30,7 +33,7 @@ body {
 
 }
 #user-status {
-	color: white;
+	color:;
 	text-align: right;
 	padding: 10px 10px 0px 0px;
 }
