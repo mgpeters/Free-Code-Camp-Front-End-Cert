@@ -64,7 +64,8 @@ $(document).ready(function(){
 						bio = userObject[users[y]].bio,
 						logo = userObject[users[y]].logo,
 						links = "http://go.twitch.tv/" + name,
-						online = '';
+						online = '',
+						streamDetails = '';
 
 					if (userObject[users[y]].status == null){
 						online = "Offline";
@@ -77,7 +78,7 @@ $(document).ready(function(){
 					}
 
 				$('#user-div')
-        		.append('<div class="user-result-cell"><img id="user-image" src="' + logo + '"></img><a href="' + links + '"><h5 id="user-name">' + name + '</h5></a><h6 class=' + online + ' id="user-status"> ' + online + '</h6><br/></div>')
+        		.append('<div class="user-result-cell"><img id="user-image" src="' + logo + '"></img><a href="' + links + '"><h5 id="user-name">' + name + '</h5></a><h6 class=' + online + ' id="user-status"> ' + online + '</h6></div>')
 				}
 		}, 1700)
  })
