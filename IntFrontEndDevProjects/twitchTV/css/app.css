@@ -9,7 +9,7 @@ body {
 	text-align: center;
 }
 .head-logo {
-	padding: 25px 0px 25px 0px;
+	padding: 25px 15px 50px 15px;
 }
 .user-result-cell {
 	max-width: 450px;
@@ -28,14 +28,15 @@ body {
 }
 #user-name {
 	float: left;
-	padding: 10px 0px 0px 20px;
+	padding: 10px 0px 0px 10px;
 
 }
 #user-status {
+	font-size: 15px;
 	color:;
 	text-align: right;
 	padding: 10px 10px 0px 0px;
 }
 #current-game{
-	
+	padding: 10px 0px 0px 10px;
 }
