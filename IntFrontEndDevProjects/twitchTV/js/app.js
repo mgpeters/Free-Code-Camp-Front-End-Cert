@@ -69,16 +69,17 @@ $(document).ready(function(){
 
 					if (userObject[users[y]].status == null){
 						online = "Offline";
-					}
-					else {
+					}else {
 						online = "Online";
+						streamDetails = userObject[users[y]].status.channel.game;
 					}
+
 					while(logo == null){
 						logo = "https://static-cdn.jtvnw.net/jtv_user_pictures/dd542e0da09855b6-profile_image-300x300.jpeg";
 					}
 
 				$('#user-div')
-        		.append('<div class="user-result-cell"><img id="user-image" src="' + logo + '"></img><a href="' + links + '"><h5 id="user-name">' + name + '</h5></a><h6 class=' + online + ' id="user-status"> ' + online + '</h6></div>')
+        		.append('<div class="user-result-cell"><img id="user-image" src="' + logo + '"></img><a href="' + links + '"><h5 id="user-name">' + name + '</h5></a><h5 id="user-name">' + streamDetails + '</h5><h6 class=' + online + ' id="user-status">' + online + '</h6></div>')
 				}
 		}, 1700)
  })
