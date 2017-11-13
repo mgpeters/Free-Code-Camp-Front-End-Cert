@@ -77,7 +77,7 @@ $(document).ready(function(){
 					}
 
 				$('#user-div')
-        		.append('<div class="user-result-cell"><img id="user-image" src="' + logo + '"></img><a href="' + links + '"><h5 id="user-name">' + name + '</h5></a><h5 class=' + online + ' id="user-status">' + online + '</h5></div>')
+        		.append('<div class="user-result-cell"><img id="user-image" src="' + logo + '"></img><a href="' + links + '"><h5 id="user-name">' + name + '</h5></a><h5 id="user-status">' + online + '</h5></div>')
 				}
 		}, 1700)
  })
