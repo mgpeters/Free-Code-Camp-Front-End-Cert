@@ -7,16 +7,39 @@ function convertToRoman(num) {
 	var roman = "";
 
 	function recursiveConvert (input){
-    	let workNum = num;
+    	let workNum = input;
 
-        if(workNum > 1000){
-
-            arr.push("M");
+        if(workNum >= 1000){
+            roman += "M";
             workNum = workNum - 1000;
-            convertToRoman(workNum);
+            console.log(input);
+            recursiveConvert(workNum);
         }
-	} 
+        else if(workNum >= 900) {
+        	roman += "CM";
+        	workNum = workNum - 900;
+        	recursiveConvert(workNum);
+        }
+        else if(workNum >= 500) {
+        	roman += "D";
+        	workNum = workNum - 500;
+        	recursiveConvert(workNum);
+        }
+        else if(workNum >= 400) {
+        	roman += "CD";
+        	workNum = workNum - 400;
+        	recursiveConvert(workNum);
+        }
+        else if(workNum >= 100) {
+        	roman += "C";
+        	workNum = workNum - 100;
+        	recursiveConvert(workNum);
+        }
+	}
+
+recursiveConvert(num);
+
 return roman;
 }
  
-convertToRoman(5000);
+convertToRoman(4800);
