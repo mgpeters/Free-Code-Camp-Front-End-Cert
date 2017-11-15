@@ -22,10 +22,15 @@ function whatIsInAName(collection, source) {
   		sourceArray = Object.keys(source);
 console.log(collection[2]);
 console.log(source);
+console.log(collection[round].hasOwnProperty(Object.keys(source)));
+console.log(collection[round][Object.keys(source)]);
 	
 	for(round; round < collection.length; round += 1){
 		if(collection[round].hasOwnProperty(Object.keys(source))){
-			if()
+			if(Object.keys(source) == collection[round][Object.keys(source)]){
+				arr.push(collection[round]);
+				console.log("Works");
+			}
 		} // Works!!
 	}
 
@@ -36,7 +41,5 @@ console.log(source);
 }
 
 whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet"});
-
-
 
 
