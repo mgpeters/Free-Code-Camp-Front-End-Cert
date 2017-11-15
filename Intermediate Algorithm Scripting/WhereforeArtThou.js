@@ -19,10 +19,9 @@ function whatIsInAName(collection, source) {
 	var arr = [],
   // Only change code below this line
   		sourceArray = Object.keys(source);
-
-  		if(collection.hasOwnProperty(source)){
-  			console.log("it does!");
-  		}
+console.log(collection[2]);
+console.log(source);
+console.log(collection[2].hasOwnProperty(Object.keys(source))); // Works!!
 
 
   
@@ -30,7 +29,7 @@ function whatIsInAName(collection, source) {
   return arr;
 }
 
-whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet", first: "lalala" });
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet"});
 
 
 
