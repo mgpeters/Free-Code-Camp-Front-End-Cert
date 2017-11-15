@@ -18,10 +18,16 @@ function whatIsInAName(collection, source) {
   // What's in a name?
 	var arr = [],
   // Only change code below this line
+  		round = 0,
   		sourceArray = Object.keys(source);
 console.log(collection[2]);
 console.log(source);
-console.log(collection[2].hasOwnProperty(Object.keys(source))); // Works!!
+	
+	for(round; round < collection.length; round += 1){
+		if(collection[round].hasOwnProperty(Object.keys(source))){
+			if()
+		} // Works!!
+	}
 
 
   
