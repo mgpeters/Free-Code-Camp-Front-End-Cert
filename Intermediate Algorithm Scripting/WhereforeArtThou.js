@@ -18,18 +18,20 @@ function whatIsInAName(collection, source) {
   // What's in a name?
 	var arr = [],
   // Only change code below this line
-  		round = 0;
+  		sourceArray = Object.keys(source);
 
-  		for (round; round < collection.length; round += 1){
-  			if(Object.keys(source) === collection[round][source]){
-  				arr.push(collection[round]);
-  			}
+  		if(collection.hasOwnProperty(source)){
+  			console.log("it does!");
   		}
-  		console.log(collection[round][source])
+
 
   
   // Only change code above this line
   return arr;
 }
 
-whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet", first: "lalala" });
+
+
+
+
