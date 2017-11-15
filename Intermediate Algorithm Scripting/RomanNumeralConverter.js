@@ -4,75 +4,39 @@
 
  
 function convertToRoman(num) {
-	var roman = "";
+	var roman = "",
+        count = 0,
+        amt = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1],
+        key = {
+            1000:"M",
+            900: "CM",
+            500: "D",
+            400: "CD",
+            100: "C",
+            90:  "XC",
+            50:  "L",
+            40:  "XL",
+            10:  "X",
+            9:   "IX",
+            5:   "V", 
+            4:   "IV",
+            1:   "I"
+        };
 
 	function recursiveConvert (input){
     	let workNum = input;
 
-        if(workNum >= 1000){
-            roman += "M";
-            workNum = workNum - 1000;
+        if(workNum >= amt[count]){
+            roman += key[amt[count]];
+            workNum = workNum - amt[count];
             recursiveConvert(workNum);
         }
-        else if(workNum >= 900) {
-        	roman += "CM";
-        	workNum = workNum - 900;
-        	recursiveConvert(workNum);
+        else if(workNum === 0){
+            return;
         }
-        else if(workNum >= 500) {
-        	roman += "D";
-        	workNum = workNum - 500;
-        	recursiveConvert(workNum);
-        }
-        else if(workNum >= 400) {
-        	roman += "CD";
-        	workNum = workNum - 400;
-        	recursiveConvert(workNum);
-        }
-        else if(workNum >= 100) {
-        	roman += "C";
-        	workNum = workNum - 100;
-        	recursiveConvert(workNum);
-        }
-        else if(workNum >= 90){
-            roman += "XC";
-            workNum = workNum - 90;
+        else {
+            count += 1;
             recursiveConvert(workNum);
-        }
-        else if(workNum >= 50) {
-        	roman += "L";
-        	workNum = workNum - 50;
-        	recursiveConvert(workNum);
-        }
-        else if(workNum >= 40) {
-        	roman += "XL";
-        	workNum = workNum - 40;
-        	recursiveConvert(workNum);
-        }
-        else if(workNum >= 10) {
-        	roman += "X";
-        	workNum = workNum - 10;
-        	recursiveConvert(workNum);
-        }
-        else if(workNum >= 9) {
-        	roman += "IX";
-        	workNum = workNum - 9;
-        	recursiveConvert(workNum);
-        } 
-        else if(workNum >= 5) {
-        	roman += "V";
-        	workNum = workNum - 5;
-        	recursiveConvert(workNum);
-        }
-        else if(workNum >= 4) {
-        	roman += "IV";
-        	workNum = workNum - 4;
-        	recursiveConvert(workNum);
-        }
-        else if(workNum >= 1) {
-        	roman += "I";
-        	workNum = workNum - 1;
-        	recursiveConvert(workNum);
         }
 	}
 
