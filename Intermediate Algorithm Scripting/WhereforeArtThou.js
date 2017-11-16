@@ -26,6 +26,7 @@ console.log(collection[round].hasOwnProperty(Object.keys(source)));
 console.log(collection[round][Object.keys(source)]);
 	
 	for(round; round < collection.length; round += 1){
+		console.log(Boolean(Object.keys(source) == collection[round][Object.keys(source)]));
 		if(collection[round].hasOwnProperty(Object.keys(source))){
 			if(Object.keys(source) == collection[round][Object.keys(source)]){
 				arr.push(collection[round]);
@@ -33,6 +34,7 @@ console.log(collection[round][Object.keys(source)]);
 			}
 		} // Works!!
 	}
+
 
 
   
