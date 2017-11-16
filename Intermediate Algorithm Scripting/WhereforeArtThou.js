@@ -19,27 +19,29 @@ function whatIsInAName(collection, source) {
 	var arr = [],
   // Only change code below this line
   		round = 0,
+  		roundOuter = 0;
   		sourceArray = Object.keys(source);
 //console.log(collection[2]);
 //console.log(source);
 //console.log(collection[round].hasOwnProperty(Object.keys(source)));
 //console.log(collection[round][Object.keys(source)]);
 	
-	for(round; round < collection.length; round += 1){
+	for(roundOuter; roundOuter < source.length; roundOuter += 1){ //thought may  not pan out
+		for(round; round < collection.length; round += 1){
 
-		console.log(Boolean(source[Object.keys(source)] == collection[round][Object.keys(source)]));
-		console.log(collection[round][Object.keys(source)]);
-		console.log(Object.keys(source));
-		console.log(source[Object.keys(source)]);
+			console.log(Boolean(source[Object.keys(source)] == collection[round][Object.keys(source)]));
+			console.log(collection[round][Object.keys(source)]);
+			console.log(Object.keys(source));
+			console.log(source[Object.keys(source)]);
 
-		if(collection[round].hasOwnProperty(Object.keys(source))){
-			if(source[Object.keys(source)] == collection[round][Object.keys(source)]){
-				arr.push(collection[round]);
-				console.log("Works");
-			}
-		} // Works!!
+			if(collection[round].hasOwnProperty(Object.keys(source))){
+				if(source[Object.keys(source)] == collection[round][Object.keys(source)]){
+					arr.push(collection[round]);
+					console.log("Works");
+				}
+			} // Works!!
+		}
 	}
-
 
 
   
