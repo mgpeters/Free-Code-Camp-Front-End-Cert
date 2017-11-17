@@ -21,20 +21,9 @@ function whatIsInAName(collection, source) {
   		innerRound = 0,
   		roundOuter = 0,
   		sourceArray = Object.keys(source);
-//console.log(collection[2]);
-//console.log(source);
-//console.log(collection[round].hasOwnProperty(Object.keys(source)));
-//console.log(collection[round][Object.keys(source)]);
-	
-	//for(roundOuter; roundOuter < source.length; roundOuter += 1){ //thought may  not pan out
+
 		for(innerRound; innerRound < collection.length; innerRound += 1){
 
-	//		Testing Area
-			console.log(Boolean(source[sourceArray[0]] && source[sourceArray[1]] == collection[innerRound][sourceArray[0]] && collection[innerRound][sourceArray[1]]));
-			console.log(collection[innerRound][sourceArray]);
-			console.log(collection[innerRound].hasOwnProperty(sourceArray));
-			console.log(source[sourceArray]);
-		//	console.log(sourceArray);
 
 			if(sourceArray.length > 1){	
 				if(collection[innerRound].hasOwnProperty(sourceArray[0])){
@@ -51,9 +40,6 @@ function whatIsInAName(collection, source) {
 					console.log("Single Works");
 					}
 		}
-	//}
-
-
   
   // Only change code above this line
   return arr;
