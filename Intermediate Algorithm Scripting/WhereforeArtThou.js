@@ -29,21 +29,27 @@ function whatIsInAName(collection, source) {
 	//for(roundOuter; roundOuter < source.length; roundOuter += 1){ //thought may  not pan out
 		for(innerRound; innerRound < collection.length; innerRound += 1){
 
-
-
 	//		Testing Area
-			console.log(Boolean(source[sourceArray] == collection[innerRound][sourceArray]));
+			console.log(Boolean(source[sourceArray[0]] && source[sourceArray[1]] == collection[innerRound][sourceArray[0]] && collection[innerRound][sourceArray[1]]));
 			console.log(collection[innerRound][sourceArray]);
-			console.log(sourceArray);
+			console.log(collection[innerRound].hasOwnProperty(sourceArray));
 			console.log(source[sourceArray]);
-			console.log(sourceArray);
+		//	console.log(sourceArray);
 
-			if(collection[innerRound].hasOwnProperty(sourceArray)){
-				if(source[sourceArray] == collection[innerRound][sourceArray]){
-					arr.push(collection[innerRound]);
-					console.log("Works");
+			if(sourceArray.length > 1){	
+				if(collection[innerRound].hasOwnProperty(sourceArray[0])){
+					if(source[sourceArray[0]] == collection[innerRound][sourceArray[0]]){
+						if(source[sourceArray[1]] == collection[innerRound][sourceArray[1]]){
+							arr.push(collection[innerRound]);
+							console.log("Double Works");
+						}
+					}
 				}
-			} // Works!!
+			}
+			else if(source[sourceArray] == collection[innerRound][sourceArray]){
+					arr.push(collection[innerRound]);
+					console.log("Single Works");
+					}
 		}
 	//}
 
@@ -53,6 +59,6 @@ function whatIsInAName(collection, source) {
   return arr;
 }
 
-whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet"});
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { first: "Tybalt", last: "Capulet"});
 
 
