@@ -32,14 +32,14 @@ function whatIsInAName(collection, source) {
 
 
 	//		Testing Area
-			console.log(Boolean(source[Object.keys(source)] == collection[innerRound][Object.keys(source)]));
-			console.log(collection[innerRound][Object.keys(source)]);
-			console.log(Object.keys(source));
-			console.log(source[Object.keys(source)]);
+			console.log(Boolean(source[sourceArray] == collection[innerRound][sourceArray]));
+			console.log(collection[innerRound][sourceArray]);
+			console.log(sourceArray);
+			console.log(source[sourceArray]);
 			console.log(sourceArray);
 
-			if(collection[innerRound].hasOwnProperty(Object.keys(source))){
-				if(source[Object.keys(source)] == collection[innerRound][Object.keys(source)]){
+			if(collection[innerRound].hasOwnProperty(sourceArray)){
+				if(source[sourceArray] == collection[innerRound][sourceArray]){
 					arr.push(collection[innerRound]);
 					console.log("Works");
 				}
