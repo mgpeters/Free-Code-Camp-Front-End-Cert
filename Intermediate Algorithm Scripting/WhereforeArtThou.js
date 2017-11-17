@@ -26,9 +26,9 @@ function whatIsInAName(collection, source) {
 //console.log(collection[round].hasOwnProperty(Object.keys(source)));
 //console.log(collection[round][Object.keys(source)]);
 	
-	for(roundOuter; roundOuter < source.length; roundOuter += 1){ //thought may  not pan out
+	//for(roundOuter; roundOuter < source.length; roundOuter += 1){ //thought may  not pan out
 		for(innerRound; innerRound < collection.length; innerRound += 1){
-			
+
 
 
 	//		Testing Area
@@ -36,15 +36,16 @@ function whatIsInAName(collection, source) {
 			console.log(collection[innerRound][Object.keys(source)]);
 			console.log(Object.keys(source));
 			console.log(source[Object.keys(source)]);
+			console.log(sourceArray);
 
 			if(collection[innerRound].hasOwnProperty(Object.keys(source))){
 				if(source[Object.keys(source)] == collection[innerRound][Object.keys(source)]){
-					arr.push(collection[round]);
+					arr.push(collection[innerRound]);
 					console.log("Works");
 				}
 			} // Works!!
 		}
-	}
+	//}
 
 
   
