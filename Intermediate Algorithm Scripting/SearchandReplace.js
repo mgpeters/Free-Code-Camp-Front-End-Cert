@@ -13,6 +13,21 @@ if you mean to replace the word "Book" with the word "dog", it should be replace
 
 
 function myReplace(str, before, after) {
+	var arr = [],
+		round = 0;
+
+		arr = str.split(" ");
+		console.log(arr);
+
+		for(round; round < arr.length; round += 1){
+			if(arr[round] == before){
+				console.log("working");
+			}
+			else{
+				console.log("skipped");
+			}
+		}
+
   return str;
 }
 
