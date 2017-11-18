@@ -26,6 +26,10 @@ function myReplace(str, before, after) {
 
 		if (caseCheckBefore[0].charCodeAt() >= 65 && caseCheckBefore[0].charCodeAt() <= 90 || caseCheckAfter[0].charCodeAt() >= 65 && caseCheckAfter[0].charCodeAt() <= 90){ // case check
 			console.log("capital check works")
+			after = caseCheckAfter[0].toUpperCase();
+			before = caseCheckBefore[0].toUpperCase();
+			console.log(after);
+			console.log(before);
 
 
 		}
