@@ -14,23 +14,33 @@ if you mean to replace the word "Book" with the word "dog", it should be replace
 
 function myReplace(str, before, after) {
 	var arr = [],
-		round = 0;
+		round = 0,
+		caseCheckBefore = before.split(""),
+		caseCheckAfter = after.split("");
 
 		arr = str.split(" ");
-		console.log(arr);
+		console.log(caseCheckAfter);
+		//console.log(caseCheckBefore);
+		console.log(caseCheckAfter[0].charCodeAt());
+		 
+
+		if (caseCheckBefore[0].charCodeAt() >= 65 && caseCheckBefore[0].charCodeAt() <= 90 || caseCheckAfter[0].charCodeAt() >= 65 && caseCheckAfter[0].charCodeAt() <= 90){ // case check
+			console.log("capital check works")
+
+
+		}
 
 		for(round; round < arr.length; round += 1){
 			if(arr[round] == before){
-				arr.splice(arr[round], 1, after)
-				console.log("working");
-				console.log(arr);
-			}
-			else{
-				console.log("skipped");
+				arr.splice(round, 1, after);
+				str = arr.join(" ");
 			}
 		}
 
   return str;
 }
 
-myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+myReplace("A quick brown fox jumped over the lazy dog", "Jumped", "leaped");
+
+
+
