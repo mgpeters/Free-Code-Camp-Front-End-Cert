@@ -21,7 +21,9 @@ function myReplace(str, before, after) {
 
 		for(round; round < arr.length; round += 1){
 			if(arr[round] == before){
+				arr.splice(arr[round], 1, after)
 				console.log("working");
+				console.log(arr);
 			}
 			else{
 				console.log("skipped");
