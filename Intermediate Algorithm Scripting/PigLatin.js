@@ -10,33 +10,36 @@ Input strings are guaranteed to be English words in all lowercase.
 */
 
 function translatePigLatin(str) {
-    var consonantGroups = [ 'bl', 'br', 'ch', 'cl', 'cr', 'dr', 'fl', 'fr', 'gl', 'gr', 'pl', 'pr', 'sc', 'sh', 'sk', 'sl', 'sm', 'sn', 'sp', 'st', 'sw', 'th', 'tr', 'tw', 'wh', 'wr', 'scg', 'scr', 'shr', 'sph', 'spl', 'spr', 'squ', 'str', 'thr'],
-       	consonant = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'x','z'],
-        vowel = ['a', 'e', 'i', 'o', 'u'],
-        strArray = [],
-        consonantGroupRound = 0,                       
-        consonantRound = 0,
-        vowelRound = 0;
+        var consonantGroups = [ 'bl', 'br', 'ch', 'cl', 'cr', 'dr', 'fl', 'fr', 'gl', 'gr', 'pl', 'pr', 'sc', 'sh', 'sk', 'sl', 'sm', 'sn', 'sp', 'st', 'sw', 'th', 'tr', 'tw', 'wh', 'wr', 'scg', 'scr', 'shr', 'sph', 'spl', 'spr', 'squ', 'str', 'thr'],
+            consonant = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'x','z'],
+            vowel = ['a', 'e', 'i', 'o', 'u'],
+            strArray = str.split(""),
+            consonantGroupRound = 0,                       
+            consonantRound = 0,
+            vowelRound = 0;
  
- 
-        for (consonantGroupRound; consonantGroupRound < consonantGroups.length; consonantGroupRound +=1){
-            if (str.indexOf(consonantGroups[consonantGroupRound]) == 0){
- 
-            }
-        }
-		for (consonantRound; consonantRound < consonant.length; consonantRound +=1){
-            if (str.indexOf(consonant[consonantRound]) == 0){
+		for (consonantGroupRound; consonantGroupRound < consonantGroups.length; consonantGroupRound +=1){
+		    if (str.indexOf(consonantGroups[consonantGroupRound]) === 0){
+		        strArray.push(consonantGroups[consonantGroupRound] + "ay");
+		        arr = strArray.join("");
+		        return arr.substr(2);
 			}
+		}
+		for (consonantRound; consonantRound < consonant.length; consonantRound +=1){
+            if (str.indexOf(consonant[consonantRound]) === 0){
+                strArray.push(consonant[consonantRound] + "ay");
+                arr = strArray.join("");
+                return arr.substr(1);
+            }
         }
 		for (vowelRound; vowelRound < vowel.length; vowelRound +=1){
             if (str.indexOf(vowel[vowelRound]) == 0){
-                strArray = str.split("");
-                strArray = strArray.push("ay");
+                strArray.push("way");
                 return strArray.join("");
             }
         }
  
-  return "Error";
+	return "No hits - Error";
 }
  
-translatePigLatin("consonant");
+translatePigLatin("eight");
