@@ -27,7 +27,7 @@ function pairElement(str) {
 		sequenceRound = 0;
 
 		for(sequenceRound; sequenceRound < sequence.length; sequenceRound += 1){
-			sequencePairs.push(sequence[sequenceRound] + pairings[sequence[sequenceRound]]);
+			sequencePairs.push([sequence[sequenceRound], pairings[sequence[sequenceRound]]]);
 		}
 
 	return sequencePairs;
