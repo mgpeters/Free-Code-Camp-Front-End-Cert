@@ -16,7 +16,20 @@ The character and its pair are paired up in an array, and all the arrays are gro
 
 
 function pairElement(str) {
-  return str;
+	var sequence = str.split("");
+		pairings = {
+			A: "T",
+			T: "A",
+			C: "G",
+			G: "C"
+		},
+		sequenceRound = 0;
+
+		for(sequenceRound; sequenceRound < sequence.length; sequenceRound += 1){
+
+		}
+
+	return str;
 }
 
 pairElement("GCG");
