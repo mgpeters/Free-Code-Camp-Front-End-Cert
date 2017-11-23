@@ -17,7 +17,7 @@ function fearNotLetter(str) {
 		numberArray.push(str.charCodeAt(round1));
 	}
 	for(round2; round2 < numberArray.length; round2 += 1){
-		if(numberArray[round2] + 1 !== numberArray[round2 + 1]){
+		if(numberArray[round2] - numberArray[round] !== 1){
 			return String.fromCharCode(numberArray[round2] + 1);
 		}
 	}
@@ -26,4 +26,4 @@ function fearNotLetter(str) {
   return undefined;
 }
 
-fearNotLetter("abce");
+fearNotLetter("bcd")
