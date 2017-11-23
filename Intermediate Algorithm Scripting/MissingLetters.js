@@ -10,16 +10,14 @@ function fearNotLetter(str) {
 	var round = 0;
 
 	for(round; round < str.length; round += 1){
-		if(isNaN(str[round +1])){
-			console.log("NaN/Undefined Works");
+		if(str[round + 1] === undefined){
 			return undefined;
 		}
 		else if(str.charCodeAt(round + 1) - str.charCodeAt(round) !== 1){
-			console.log("elseif works on round: " + round);
 			return String.fromCharCode(str.charCodeAt(round) + 1);
 		}
 	}
   return undefined;
 }
 
-fearNotLetter("bcd");
+fearNotLetter("abce");
