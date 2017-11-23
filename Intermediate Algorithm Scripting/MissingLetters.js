@@ -7,25 +7,10 @@ If all letters are present in the range, return undefined.
 */
 
 function fearNotLetter(str) {
-	var numberArray = [],
-		round = 0,
-		round2 = 0;
-
-		console.log(str.charCodeAt(3));
-
-	/*for(round1; round1 < str.length; round1+= 1){
-		numberArray.push(str.charCodeAt(round1));
-	}
-	for(round2; round2 < numberArray.length; round2 += 1){
-		if(str.charCodeAt(round2) !== numberArray[round2]){
-			return String.fromCharCode(numberArray[round2] + 1);
-		}
-	}
-	console.log(numberArray);
-	*/
+	var round = 0;
 
 	for(round; round < str.length; round += 1){
-		if(isNaN(str.charCodeAt(round))){
+		if(isNaN(str[round +1])){
 			console.log("NaN/Undefined Works");
 			return undefined;
 		}
@@ -37,4 +22,4 @@ function fearNotLetter(str) {
   return undefined;
 }
 
-fearNotLetter("abce");
+fearNotLetter("bcd");
