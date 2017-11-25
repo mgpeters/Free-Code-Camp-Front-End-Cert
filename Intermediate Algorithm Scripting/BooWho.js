@@ -8,16 +8,12 @@ Boolean primitives are true and false.
 
 function booWho(bool) {
   // What is the new fad diet for ghost developers? The Boolean.
-  var booleanPrim = new Boolean(bool);
-
-  console.log(booleanPrim);
-
-  if(booleanPrim){
-  	return true;
-  }
-  else{
-  	return false;
-  }
+	if(typeof bool === "boolean"){
+		return true;
+	}
+	else{
+		return false;
+	}
 }
 
-booWho(1);
+booWho(false);
