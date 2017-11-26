@@ -15,7 +15,9 @@ Check the assertion tests for examples.
 
 
 function uniteUnique(arr) {
-  return arr;
+  return arr.reduce(function(){
+  	
+  });
 }
 
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
