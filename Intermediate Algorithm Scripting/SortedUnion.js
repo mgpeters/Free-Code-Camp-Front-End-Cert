@@ -15,9 +15,16 @@ Check the assertion tests for examples.
 
 
 function uniteUnique(arr) {
-  return arr.reduce(function(){
-  	
-  });
+	var	union = [],
+		roundOuter = 0;
+
+		for(roundOuter; roundOuter < arguments.length; roundOuter += 1){
+			for(let roundInner = 0; roundInner < union.length; roundInner += 1){
+				union.push()
+			}
+		}
+ 
+  return union;
 }
 
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
