@@ -14,15 +14,16 @@ Check the assertion tests for examples.
 */
 
 
-function uniteUnique(arr) {
-	var	union = [],
-		round = 0;
 
-	for(round; round < arguments.length; round += 1){
+function uniteUnique(arr) {
+	var round1 = 0;
+
+	for(round1; round1 < arguments.length; round1 +=1){
+		
+
 		
 	}
-
-	return union;
 }
 
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
