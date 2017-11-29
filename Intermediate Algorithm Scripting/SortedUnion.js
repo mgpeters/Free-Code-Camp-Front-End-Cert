@@ -16,22 +16,22 @@ Check the assertion tests for examples.
 
 
 function uniteUnique(arr) {
-	var uniqueArr = [],
+	var mergedArr = [],
+		uniqueArr = [],
 		round = 0;
 
 	for(round; round < arguments.length; round += 1){
 		arguments[round].map(function(currentElement, argIndex){
 			if(Array.isArray(currentElement)){
-				uniqueArr.push(currentElement[0]);
+				mergedArr.push(currentElement[0]);
 			}
 			else{
-				uniqueArr.push(currentElement);
+				mergedArr.push(currentElement);
 			}
 		})
 	}
-
-
-	console.log(uniqueArr);
+	console.log("Merged Array: " + mergedArr);
+	console.log("Unique Array: " + uniqueArr);
 }
 
 uniteUnique([1, 3, 2], [5, 2, 1, [4]], [2, 1]);
