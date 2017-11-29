@@ -23,16 +23,30 @@ function uniteUnique(arr) {
 	for(round; round < arguments.length; round += 1){
 		arguments[round].map(function(currentElement, argIndex){
 			if(Array.isArray(currentElement)){
-				mergedArr.push(currentElement[0]);
+				for(let x = 0; x < currentElement.length; x +=1){
+					mergedArr.push(currentElement[x]);
+				}
 			}
 			else{
 				mergedArr.push(currentElement);
 			}
 		})
 	}
+	/*if(uniqueArr.length === 0){
+		uniqueArr.push(mergedArr[0]);
+	}
+
+	mergedArr.map(function(currentElement, argIndex){
+		for(let x = 0; x < uniqueArr.length; x += 1){
+			if(currentElement === uniqueArr[x]){
+				uniqueArr.push(currentElement);
+			}
+		}
+	})*/
+
 	console.log("Merged Array: " + mergedArr);
 	console.log("Unique Array: " + uniqueArr);
 }
 
-uniteUnique([1, 3, 2], [5, 2, 1, [4]], [2, 1]);
+uniteUnique([1, 3, 2], [5, 2, [1, 4]], [2, 1]);
 
