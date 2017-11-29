@@ -20,32 +20,21 @@ function uniteUnique(arr) {
 		uniqueArr = [],
 		round = 0;
 
-	for(round; round < arguments.length; round += 1){
+	for(round; round < arguments.length; round += 1){ //Creates a single array with all numbers. Nested or not.
 		arguments[round].map(function(currentElement, argIndex){
-			if(Array.isArray(currentElement)){
-				for(let x = 0; x < currentElement.length; x +=1){
-					mergedArr.push(currentElement[x]);
-				}
-			}
-			else{
 				mergedArr.push(currentElement);
-			}
-		})
+		});
 	}
-	/*if(uniqueArr.length === 0){
-		uniqueArr.push(mergedArr[0]);
-	}
-
 	mergedArr.map(function(currentElement, argIndex){
-		for(let x = 0; x < uniqueArr.length; x += 1){
-			if(currentElement === uniqueArr[x]){
-				uniqueArr.push(currentElement);
-			}
+		if(uniqueArr.length === 0){
+			uniqueArr.push(currentElement);
 		}
-	})*/
+		else if(uniqueArr.indexOf(currentElement) === -1){
+			uniqueArr.push(currentElement);
+		}
+	});
 
-	console.log("Merged Array: " + mergedArr);
-	console.log("Unique Array: " + uniqueArr);
+	return uniqueArr;
 }
 
 uniteUnique([1, 3, 2], [5, 2, [1, 4]], [2, 1]);
