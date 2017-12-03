@@ -7,15 +7,15 @@ Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a strin
 function convertHTML(str) {
   // &colon;&rpar;\
 	var	regExpression = [/&|<|>|"|'/],
-		regExpressionKey = {
-			&: '&amp',
-			<: 'lt',
-			>: '&gt',
-			": '&quot',
-			': '&apos'
-		};
+		regexKey = {};
+		
+		regexKey[/&/] = '&amp';
+		regexKey[/</] = '&lt';
+		regexKey[/>/] = '&gt';
+		regexKey[/"/] = '&quot';
+		regexKey[/'/] = '&apos';
   
-  return str.replace();
+  return str.replace(regExpression, regexKey[regExpression]);
 }
 
 convertHTML("Dolce & Gabbana");
