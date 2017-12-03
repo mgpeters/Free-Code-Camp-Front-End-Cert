@@ -6,7 +6,7 @@ Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a strin
 
 function convertHTML(str) {
   // &colon;&rpar;\
-  var regExpression = [];
+  var regExpression = [/&|<|>|"|'/];
   
   return str;
 }
