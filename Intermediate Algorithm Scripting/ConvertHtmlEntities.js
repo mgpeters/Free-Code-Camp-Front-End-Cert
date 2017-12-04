@@ -6,14 +6,14 @@ Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a strin
 
 function convertHTML(str) {
   // &colon;&rpar;\
-	var	regExpression = [/&|<|>|"|'/],
+	var	regExpression = /&|<|>|"|'/,
 		regexKey = {};
 		
-		regexKey[/&/] = '&amp';
-		regexKey[/</] = '&lt';
-		regexKey[/>/] = '&gt';
-		regexKey[/"/] = '&quot';
-		regexKey[/'/] = '&apos';
+		regexKey[/&/] = '&amp;';
+		regexKey[/</] = '&lt;';
+		regexKey[/>/] = '&gt;';
+		regexKey[/"/] = '&quot;';
+		regexKey[/'/] = '&apos;';
   
   return str.replace(regExpression, regexKey[regExpression]);
 }
