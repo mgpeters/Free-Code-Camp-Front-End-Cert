@@ -18,6 +18,7 @@ function convertHTML(str) {
 
 		//console.log(typeof regExpression.exec(str) === object);
 
+
 	return convert;
 }
 
