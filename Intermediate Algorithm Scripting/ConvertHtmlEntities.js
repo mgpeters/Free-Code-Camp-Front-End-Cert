@@ -6,7 +6,6 @@ Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a strin
 function convertHTML(str) {
   // &colon;&rpar;\
 	var	regExpression = /&|<|>|"|'/g,
-		found = regExpression.exec(str),
 		convert = "",
 		regexKey = {};
 		
@@ -19,12 +18,21 @@ function convertHTML(str) {
 		//console.log(typeof regExpression.exec(str) === object);
 
 		function filterREGEX(input){
-			if(regExpression.exec(input) === null){
+			let found = regExpression.exec(input);
+
+			if(found === null){
+				console.log("nothing to change: " + found);
 				convert = input;
 				return;
 			}
 			else if(regExpression.test(input)){
-				return;
+				convert = input.replace(regExpression, regexKey['/' + found[0] + '/'])
+				console.log("Change Detected: " + regExpression);
+				filterREGEX(convert);
+			}
+			else{
+				console.log("Broke Recursion");
+				return input;
 			}
 
 		}
@@ -35,5 +43,5 @@ function convertHTML(str) {
 }
 
 
-convertHTML("ab&hhc");
+convertHTML("abhhc");
 
