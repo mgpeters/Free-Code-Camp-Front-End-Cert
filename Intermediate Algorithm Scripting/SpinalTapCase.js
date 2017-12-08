@@ -5,9 +5,21 @@ Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-da
 */
 
 function spinalCase(str) {
-	var regex = /[_|]/
 
-  return str.toLowerCase().replace("", "-");
+
+	function switchaRoo(input){
+	  		switch(input){
+	    		case " ":
+	    		case "_":
+	    			return "-";
+	    		//case "A-Z":
+	      		//	return " ";
+	    }
+	 }
+
+	str = str.split(/(?=[A-Z])/).join("-");
+
+	return str.toLowerCase().replace(/[\s_]/g, switchaRoo);
 }
 
-spinalCase('This Is Spinal Tap');
+spinalCase("ThisIsSpinalTap");
