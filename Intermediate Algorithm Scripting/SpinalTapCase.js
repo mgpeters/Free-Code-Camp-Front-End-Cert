@@ -16,10 +16,14 @@ function spinalCase(str) {
 	      		//	return " ";
 	    }
 	 }
+	 if (!/\s/.test(str)){
+	 	return str.split(/(?=[A-Z])/).join("-");
+	 }
+	 console.log(Boolean(/\s/.test(str)));
+	//str = str.split(/(?=[A-Z])/).join("-");
 
-	str = str.split(/(?=[A-Z])/).join("-");
 
 	return str.toLowerCase().replace(/[\s_]/g, switchaRoo);
 }
 
-spinalCase("ThisIsSpinalTap");
+spinalCase("This Is Spinal Tap");
