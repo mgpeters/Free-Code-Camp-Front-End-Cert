@@ -16,15 +16,13 @@ function spinalCase(str) {
 	      		//	return " ";
 	    }
 	 }*/
-	 console.log(str.match(/[A-Z][a-z]+/g).join(" ")); // Helps seperate strings with no white spaces
-	 /*if (!/\s/.test(str)){
-	 	return str.split(/(?=[A-Z])/).join("-");
-	 }
-	 console.log(Boolean(/\s/.test(str)));
-	//str = str.split(/(?=[A-Z])/).join("-");
-	*/
+	//console.log(/[\s_-]+/g.test(str));
+	//console.log(str.match(/[A-Z][a-z]+/g).join(" "));
+	if (!/[\s_-]+/g.test(str)){ // checks if str has none of the special characters
+		str = str.match(/[A-Z][a-z]+/g).join(" ");// Helps seperate strings with no white spaces
+	}
 
 	return str.replace(/[\s_]/g, "-");
 }
 
-spinalCase("This Is Spinal Tap");
+spinalCase("ThisIsSpinalTap");
