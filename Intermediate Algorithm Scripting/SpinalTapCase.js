@@ -7,7 +7,7 @@ Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-da
 function spinalCase(str) {
 
 
-	function switchaRoo(input){
+	/*function switchaRoo(input){
 	  		switch(input){
 	    		case " ":
 	    		case "_":
@@ -15,15 +15,16 @@ function spinalCase(str) {
 	    		//case "A-Z":
 	      		//	return " ";
 	    }
-	 }
-	 if (!/\s/.test(str)){
+	 }*/
+	 console.log(str.match(/[A-Z][a-z]+/g).join(" ")); // Helps seperate strings with no white spaces
+	 /*if (!/\s/.test(str)){
 	 	return str.split(/(?=[A-Z])/).join("-");
 	 }
 	 console.log(Boolean(/\s/.test(str)));
 	//str = str.split(/(?=[A-Z])/).join("-");
+	*/
 
-
-	return str.toLowerCase().replace(/[\s_]/g, switchaRoo);
+	return str.replace(/[\s_]/g, "-");
 }
 
 spinalCase("This Is Spinal Tap");
