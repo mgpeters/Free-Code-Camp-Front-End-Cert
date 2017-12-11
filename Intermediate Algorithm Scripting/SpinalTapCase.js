@@ -22,7 +22,7 @@ function spinalCase(str) {
 		str = str.match(/[A-Z][a-z]+/g).join(" ");// Helps seperate strings with no white spaces
 	}
 
-	return str.replace(/[\s_]+/g, "-");
+	return str.replace(/[\s_-]+/g, "-");
 }
 
 spinalCase("ThisIsSpinalTap");
