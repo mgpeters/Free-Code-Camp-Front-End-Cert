@@ -14,22 +14,7 @@ For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less
 
 
 function sumFibs(num) {
-	var fibs;
-
-	function fibonacci(num) {
-		if(num % 2 !== 0){
-			console.log("Number: " + num + " is Odd");
-			fibs += num;
-		}
-		if (num <= 1){
-			return 1;
-		} 
-  		return fibonacci(num - 1) + fibonacci(num - 2);
-  	}
-
-  	fibs = fibonacci(num);
-
-return fibs;
+  return num;
 }
 
 sumFibs(4);
