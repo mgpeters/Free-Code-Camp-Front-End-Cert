@@ -17,6 +17,10 @@ function sumFibs(num) {
 	var fibs;
 
 	function fibonacci(num) {
+		if(num % 2 !== 0){
+			console.log("Number: " + num + " is Odd");
+			fibs += num;
+		}
 		if (num <= 1){
 			return 1;
 		} 
