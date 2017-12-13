@@ -14,12 +14,18 @@ For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less
 
 
 function sumFibs(num) {
+	var fibs;
 
-	function fib (){ //make a recursion Fibonacci function
+	function fibonacci(num) {
+		if (num <= 1){
+			return 1;
+		} 
+  		return fibonacci(num - 1) + fibonacci(num - 2);
+  	}
 
-	}
+  	fibs = fibonacci(num);
 
-return num;
+return fibs;
 }
 
 sumFibs(4);
