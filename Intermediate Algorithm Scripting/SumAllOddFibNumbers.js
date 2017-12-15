@@ -16,6 +16,7 @@ For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less
 function sumFibs(num) {
 	var drum = null;
 
+
 	function fibonacci(input){
   		var a = 1, b = 0, temp;
 
