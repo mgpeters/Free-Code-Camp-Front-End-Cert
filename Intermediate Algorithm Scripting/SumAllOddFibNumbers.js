@@ -26,10 +26,10 @@ function sumFibs(num) {
 	    	b = temp;
 	    	console.log(a);
 
-    		/*if(b & 2 !== 0){
-    			drum += b;
-    			console.log(b + " has been added to DRUM!");
-    		}*/
+    		if(a % 2 !== 0){
+    			drum += a;
+    			console.log(a + " has been added to DRUM!");
+    		}
 
     		input -= 1;
  		}
