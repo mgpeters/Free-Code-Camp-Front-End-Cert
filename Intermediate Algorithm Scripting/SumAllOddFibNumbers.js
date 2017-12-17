@@ -24,12 +24,12 @@ function sumFibs(num) {
 	    	temp = a;
 	    	a = a + b;
 	    	b = temp;
-	    	console.log(b);
+	    	console.log(a);
 
-    		if(b & 2 !== 0){
+    		/*if(b & 2 !== 0){
     			drum += b;
     			console.log(b + " has been added to DRUM!");
-    		}
+    		}*/
 
     		input -= 1;
  		}
@@ -38,7 +38,8 @@ function sumFibs(num) {
 	}
 
 	fibonacci(num)
-return drum;
+
+//return drum;
 }
 
 sumFibs(4);
