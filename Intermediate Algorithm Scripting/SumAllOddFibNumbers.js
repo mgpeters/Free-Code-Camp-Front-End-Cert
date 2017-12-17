@@ -14,31 +14,32 @@ For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less
 
 
 function sumFibs(num) {
-	var drum = 1;
+	var drum = 0;
 
 
 	function fibonacci(input){
   		var a = 1, b = 0, temp;
 
-		while (input >= 2 && a < num){
-	    	temp = a;
-	    	a = a + b;
-	    	b = temp;
-	    	console.log("A is: " + a + "\nWhile B is: " + b);
-
+		while (a <= num){
+    		
     		if(a % 2 !== 0){
     			drum += a;
     			console.log(a + " has been added to DRUM!\nDrum is now: " + drum);
 
     		}
 
-    		input -= 1;
+	    	temp = a;
+	    	a = a + b;
+	    	b = temp;
+	    	console.log("A is: " + a + "\nB is: " + b);
+
  		}
 
 	return b;
+	
 	}
 
-	fibonacci(num)
+	fibonacci(num);
 
 return drum;
 }
