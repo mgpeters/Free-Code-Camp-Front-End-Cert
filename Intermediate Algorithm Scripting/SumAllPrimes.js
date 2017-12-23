@@ -12,20 +12,7 @@ The provided number may not be a prime.
 
 
 function sumPrimes(num) {
-	var key = [];
-		round = 0,
-		bucket = 0;
-
-	for(round; round <= num; round += 1){
-		
-
-		/*if(num > 1 && num / num === 1){
-			bucket += round;
-		}*/
-		console.log("Num = " + round + "\nBucket = " + bucket);
-	}
-	
-	return bucket;
+  return num;
 }
 
 sumPrimes(10);
