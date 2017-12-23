@@ -12,7 +12,16 @@ The provided number may not be a prime.
 
 
 function sumPrimes(num) {
-  return num;
+	var bucket = [], //bucket list of numbers up to num
+		round = 2;
+
+	for(round; round <= num; round += 1){ //finds and buckets all numbers for num starting with 2
+		bucket += round;
+	}
+
+	console.log(bucket);
+
+	return num;
 }
 
 sumPrimes(10);
