@@ -17,7 +17,7 @@ function sumPrimes(num) {
 		round1 = 0;
 
 	for(bucketRound; bucketRound <= num; bucketRound += 1){ //finds and buckets all numbers for num starting with 2
-		bucketRound.push(round);
+		bucket.push(bucketRound);
 	}
 	console.log("Your bucket contains: " + bucket);
 
@@ -33,7 +33,7 @@ function sumPrimes(num) {
 		}
 	}
 
-	return num;
+	return "Loop as run it's course";
 }
 
 sumPrimes(10);
