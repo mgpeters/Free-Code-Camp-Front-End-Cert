@@ -13,13 +13,25 @@ The provided number may not be a prime.
 
 function sumPrimes(num) {
 	var bucket = [], //bucket list of numbers up to num
-		round = 2;
+		bucketRound = 2,
+		round1 = 0;
 
-	for(round; round <= num; round += 1){ //finds and buckets all numbers for num starting with 2
-		bucket.push(round);
+	for(bucketRound; bucketRound <= num; bucketRound += 1){ //finds and buckets all numbers for num starting with 2
+		bucketRound.push(round);
 	}
+	console.log("Your bucket contains: " + bucket);
 
-	console.log(bucket);
+	for(round1; round1 < bucket.length; round1 += 1){ //Sieve of Eratosthenes
+		for(let round2 = 0; round2 < bucket.length; round2 += 1){
+			if(bucket[round2 + 1] === NaN){
+				console.log("You've reached the end of our bucket");
+				return;
+			}
+			if(bucket[round1] % bucket[round2 + 1] === 0){
+				console.log("You've found the composit number: " + bucket[round2 + 1]);
+			}
+		}
+	}
 
 	return num;
 }
