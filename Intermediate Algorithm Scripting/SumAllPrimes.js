@@ -19,21 +19,21 @@ function sumPrimes(num) {
 	for(bucketRound; bucketRound <= num; bucketRound += 1){ //finds and buckets all numbers for num starting with 2
 		bucket.push(bucketRound);
 	}
+
 	console.log("Your bucket contains: " + bucket);
 
 	for(round1; round1 < bucket.length; round1 += 1){ //Sieve of Eratosthenes
 		for(let round2 = 0; round2 < bucket.length; round2 += 1){
-			if(bucket[round2 + 1] === NaN){
-				console.log("You've reached the end of our bucket");
-				return;
-			}
-			if(bucket[round1] % bucket[round2 + 1] === 0){
-				console.log("You've found the composit number: " + bucket[round2 + 1]);
-			}
+		let index = bucket[round1] * bucket[round2];
+
+		
+		//The sieve checks multiples of numbers in our array, use the loop to create an index, then use .indexOf() to see
+		// if this number appears i our array, if it does, .splice() it out
+
 		}
 	}
 
 	return "Loop as run it's course";
 }
 
-sumPrimes(10);
+sumPrimes(5);
