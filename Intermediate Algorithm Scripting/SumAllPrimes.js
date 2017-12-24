@@ -24,9 +24,12 @@ function sumPrimes(num) {
 
 	for(round1; round1 < bucket.length; round1 += 1){ //Sieve of Eratosthenes
 		for(let round2 = 0; round2 < bucket.length; round2 += 1){
-		let index = bucket[round1] * bucket[round2];
+		let multiple = bucket[round1] * bucket[round2];
 
-		
+			if(bucket.indexOf(multiple) >= 1){
+				let index = bucket.indexOf(multiple);
+				bucket.splice(index, 1);
+			}
 		//The sieve checks multiples of numbers in our array, use the loop to create an index, then use .indexOf() to see
 		// if this number appears i our array, if it does, .splice() it out
 
