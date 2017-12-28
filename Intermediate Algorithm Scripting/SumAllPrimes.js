@@ -27,23 +27,23 @@ function sumPrimes(num) {
 
 	for(round1; round1 < bucket.length; round1 += 1){ //Sieve of Eratosthenes
 		for(let round2 = 0; round2 < bucket.length; round2 += 1){
-			console.log("round1 is now: " + round1 + " which contains: " + bucket[round1] + " while round2 is now: " + round2 + " which contains: " + bucket[round2]);
+			console.log("bucket contains: " + bucket + " while round1 is now: " + round1 + " which contains: " + bucket[round1] + " while round2 is now: " + round2 + " which contains: " + bucket[round2]);
 			let multiple = bucket[round1] * bucket[round2];
 			console.log("var multiple is: " + multiple);
 
 			console.log("Here's the index of bucket.indexOf(multiple): " + bucket.indexOf(multiple));
 
-			if(bucket.indexOf(multiple) >= 1){
-				let index = bucket.indexOf(multiple);
-				seiveBucket.splice(index, 1);
-				console.log("bucket now contains: " + bucket);
+			if(sieveBucket.indexOf(multiple) >= 1){
+				let index = sieveBucket.indexOf(multiple);
+				sieveBucket.splice(index, 1);
+				console.log("SeiveBucket now contains: " + sieveBucket);
 			}
 		//The sieve checks multiples of numbers in our array, use the loop to create an index, then use .indexOf() to see
 		// if this number appears i our array, if it does, .splice() it out
 
 		}
 	}
-	console.log("Final var bucket contains: " + bucket);
+	console.log("Final var Seivebucket contains: " + sieveBucket);
 	return "Loop as run it's course";
 }
 
