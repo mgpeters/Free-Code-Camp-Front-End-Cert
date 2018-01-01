@@ -17,6 +17,10 @@ function sumPrimes(num) {
 		bucketRound = 2,
 		round1 = 0;
 
+	function add(x, y){
+		return x + y;
+	}
+
 	for(bucketRound; bucketRound <= num; bucketRound += 1){ //finds and buckets all numbers for num starting with 2
 		bucket.push(bucketRound);
 	}
@@ -51,8 +55,10 @@ function sumPrimes(num) {
 
 		}
 	}
+
+
 	console.log("Final var Seivebucket contains: " + sieveBucket);
-	return "Loop as run it's course";
+	return sieveBucket.reduce(add, 0);
 }
 
-sumPrimes(8);
+sumPrimes(10);
