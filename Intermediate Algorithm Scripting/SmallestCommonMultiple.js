@@ -15,8 +15,8 @@ divisible by all numbers between 1 and 3.
 function smallestCommons(arr) {
 	var range = [];
 
-	if(arguments[0] > arguments[1]){
-		arr = [arguments[1], arguments[0]];
+	if(arr[0] > arr[1]){
+		arr = [arr[1], arr[0]];
 	}
 
 	for(let round0 = arr[0]; round0 <= arr[1]; round0 += 1){
