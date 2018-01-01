@@ -13,8 +13,21 @@ divisible by all numbers between 1 and 3.
 */
 
 function smallestCommons(arr) {
-  return arr;
+	var range = [];
+
+	if(arguments[0] > arguments[1]){
+		arr = [arguments[1], arguments[0]];
+	}
+
+	for(let round0 = arr[0]; round0 <= arr[1]; round0 += 1){
+		range.push(round0);
+	}
+
+	console.log(range);
+
+
+ // return arr;
 }
 
 
-smallestCommons([1,5]);
+smallestCommons([5, 1]);
