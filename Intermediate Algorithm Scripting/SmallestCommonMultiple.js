@@ -15,11 +15,11 @@ divisible by all numbers between 1 and 3.
 function smallestCommons(arr) {
 	var range = [];
 
-	if(arr[0] > arr[1]){
+	if(arr[0] > arr[1]){ //arranges the arguments from lowest to highest
 		arr = [arr[1], arr[0]];
 	}
 
-	for(let round0 = arr[0]; round0 <= arr[1]; round0 += 1){
+	for(let round0 = arr[0]; round0 <= arr[1]; round0 += 1){//pushes the range of arguments
 		range.push(round0);
 	}
 
