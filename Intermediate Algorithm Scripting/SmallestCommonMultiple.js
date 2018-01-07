@@ -13,7 +13,10 @@ divisible by all numbers between 1 and 3.
 */
 
 function smallestCommons(arr) {
-	var range = [];
+	var range = [],
+		commonMultiple = 0,
+		loop = 1,
+		multipleLoop;
 
 	if(arr[0] < arr[1]){ //arranges the arguments from highest to lowest
 		arr = [arr[1], arr[0]];
@@ -23,20 +26,23 @@ function smallestCommons(arr) {
 		range.push(round0);
 	}
 
-	for(let round1 = 0; round1 < range.length; round1 += 1){// find the multiples of the two elements of the arr array
-		let multiple = 2,
-		commonMultiple = multiple * range[round1];
+	do{
+		commonMultiple = range[0] * loop * range[1];
 
-		
+		for(multipleLoop = 2; multipleLoop < range.length; multipleLoop += 1){
+			if(commonMultiple % range[multipleLoop] !== 0){
+				break;
+			}
+		}
 
-		multiple += 1;
+	loop += 1;
 	}
+	while(multipleLoop !== range.length);
 
-	console.log(range);
+console.log(commonMultiple);
 
-
- // return arr;
+return commonMultiple;
 }
 
 
-smallestCommons([3, 10]);
+smallestCommons([1, 5]);
