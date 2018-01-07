@@ -23,6 +23,15 @@ function smallestCommons(arr) {
 		range.push(round0);
 	}
 
+	for(let round1 = 0; round1 < range.length; round1 += 1){// find the multiples of the two elements of the arr array
+		let multiple = 2,
+		commonMultiple = multiple * range[round1];
+
+		
+
+		multiple += 1;
+	}
+
 	console.log(range);
 
 
