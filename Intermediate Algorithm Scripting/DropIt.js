@@ -8,6 +8,19 @@ The second argument, func, is a function you'll use to test the first elements o
 
 Return the rest of the array, otherwise return an empty array.
 
+dropElements([1, 2, 3, 4], function(n) {return n >= 3;}) should return [3, 4].
+dropElements([0, 1, 0, 1], function(n) {return n === 1;}) should return [1, 0, 1].
+dropElements([1, 2, 3], function(n) {return n > 0;}) should return [1, 2, 3].
+dropElements([1, 2, 3, 4], function(n) {return n > 5;}) should return [].
+dropElements([1, 2, 3, 7, 4], function(n) {return n > 3;}) should return [7, 4].
+dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;}) should return [3, 9, 2].
+
+Here are some helpful links:
+
+Arguments object
+Array.prototype.shift()
+Array.prototype.slice()
+
 */
 
 
